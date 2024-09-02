@@ -1552,6 +1552,11 @@ StEntry StLabel.hint-text,
 /* My Custom Top Bar */
 #panel {
   background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  font-feature-settings: 'tnum';
+  transition-duration: 250ms;
+  box-shadow: none;
+  height: 35px;
 }
 
 #panel .panel-button {
@@ -1600,6 +1605,7 @@ StEntry StLabel.hint-text,
 #panel .panel-button.clock-display .clock {
   transition-duration: 150ms;
   border-radius: 12px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
 #panel .panel-button:hover {
