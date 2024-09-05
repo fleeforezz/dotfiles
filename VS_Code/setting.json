@@ -1,0 +1,133 @@
+{
+    //########################## Editor Config ##########################\\
+    "redhat.telemetry.enabled": true,
+    "workbench.iconTheme": "symbols",
+    "editor.fontFamily": "Geist Mono, GeistMono Nerd Font",
+    "editor.suggestLineHeight": 30,
+    "code-runner.runInTerminal": true,
+    "files.autoSave": "afterDelay",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.env.linux": {},
+    "window.titleBarStyle": "custom",
+    "indentRainbow.colors": [
+        "rgba(62, 208, 255, 0.09)",
+        "rgba(62, 129, 255, 0.09)",
+        "rgba(62, 73, 255, 0.09)",
+        "rgba(145, 62, 255, 0.09)"
+    ],
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#25e6ff",
+        "editorBracketHighlight.foreground2": "#773EFF",
+        "editorBracketHighlight.foreground3": "#504dff",
+        "editorBracketHighlight.foreground4": "#6000FF",
+        "editorBracketHighlight.foreground5": "#C100FF",
+        "editorBracketHighlight.foreground6": "#D200FF",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+    },
+    "vscode-pets.petColor": "gray",
+    "vscode-pets.petType": "chicken",
+    "vscode-pets.throwBallWithMouse": true,
+    "vscode-pets.theme": "castle",
+    "security.workspace.trust.untrustedFiles": "open",
+    "vsicons.dontShowNewVersionMessage": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "todohighlight.isEnable": true,
+    "workbench.colorTheme": "Min Dark",
+    "livePreview.customExternalBrowser": "Chrome",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "symbols.hidesExplorerArrows": false,
+    "window.customTitleBarVisibility": "auto",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "editor.fontSize": 14,
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/jso/custom-vscode.css",
+        "file:///C:/Users/jso/vscode-script.js",
+        "file:///home/nhat/vscode_custom_css/custom-vscode.css",
+        "file:///home/nhat/vscode_custom_css/vscode-script.js"
+    ],
+    "workbench.statusBar.visible": true,
+    "editor.padding.top": 16,
+    // "workbench.editor.showTabs": "none",
+    // "editor.minimap.enabled": false,
+    // "editor.lineNumbers": "off",
+    "editor.hover.enabled": true,
+    "material-icon-theme.files.color": "#42a5f5",
+    "material-icon-theme.saturation": 0,
+    "workbench.tree.enableStickyScroll": false,
+    "terminal.integrated.fontFamily": "GeistMono Nerd Font",
+    "workbench.activityBar.location": "top",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+
+    //########################## Better Comments Config ##########################\\
+    "better-comments.highlightPlainText": false,
+    "better-comments.multilineComments": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "#",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "window.commandCenter": false
+}
