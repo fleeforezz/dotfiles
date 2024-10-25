@@ -35,7 +35,7 @@
 	/* accent colors */
 	--accent-1: #7caea3; /* links */
 	--accent-2: #373d4d; /* general unread/mention elements */
-	--accent-3: #373d4d; /* accent buttons */
+	--accent-3: #8591b3; /* accent buttons */
 	--accent-4: #373d4d; /* accent buttons when hovered */
 	--accent-5: #373d4d; /* accent buttons when clicked */
 	--mention: hsla(343.6, 46.7%, 61.6%, 0.1); /* mentions & mention messages */
