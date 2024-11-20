@@ -15,17 +15,18 @@
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
 @import url('https://fonts.googleapis.com/css?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 /* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
-	--font: '';
+	--font: "Funnel Display";
 
 	/* top left corner text */
 	--corner-text: 'Hi There 👋';
 
 	/* thickness of messages divider */
-	--divider-thickness: 3px;
+	--divider-thickness: 2px;
 
 	/* color of status indicators and window controls */
 	--online-indicator: #53d173; /* change to #23a55a for default green */
@@ -38,7 +39,7 @@
 	--accent-3: #373d4d; /* accent buttons */
 	--accent-4: #373d4d; /* accent buttons when hovered */
 	--accent-5: #373d4d; /* accent buttons when clicked */
-	--mention: hsla(343.6, 46.7%, 61.6%, 0.1); /* mentions & mention messages */
+	--mention: hsla(343, 100%, 3%, 0.1); /* mentions & mention messages */
 	--mention-hover: hsla(343.6, 46.7%, 61.6%, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
@@ -47,15 +48,15 @@
 	--text-2: hsl(0, 0%, 85%); /* headings and important text */
 	--text-3: #c7c7c7; /* normal text */
 	--text-4: #a1a1a1; /* icon buttons and channels */
-	--text-5: #8ed0d466; /* muted channels/chats and timestamps */
+	--text-5: #77969766; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
 	--bg-1: #373d4d; /* dark buttons when clicked */
 	--bg-2: hsl(222, 18%, 30%); /* dark buttons */
-	--bg-3: #1b1f27; /* spacing, secondary elements */
+	--bg-3: #2a303b; /* spacing, secondary elements */
 	--bg-4: #15181e; /* main background color */
 	--hover: #282f41; /* channels and buttons when hovered */
-	--active: #373d4d; /* channels and buttons when clicked or selected */
+	--active: #0d1f50; /* channels and buttons when clicked or selected */
 	--message-hover: hsla(0, 0%, 59%, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
