@@ -1,0 +1,12 @@
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\bin\Debug\Cursor.pkgdef
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\bin\Debug\CursorTheme.vsix
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\bin\Debug\extension.vsixmanifest
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\CursorTheme.csproj.AssemblyReference.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\_EmptyResource.resources
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\CursorTheme.csproj.GenerateResource.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\CursorTheme.csproj.CoreCompileInputs.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\CursorTheme.dll
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\CursorTheme.pdb
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\extension.vsixmanifest
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\files.json
+E:\Cabinet\Github\dotfiles\VS_Themes\CursorTheme\CursorTheme\obj\Debug\createTemplateManifests.cache
