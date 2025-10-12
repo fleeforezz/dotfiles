@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\viewmodels\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\viewmodels\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\viewmodels\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\testapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1872E619-94DC-4A2A-91B0-B0416C9F4BFB}|TestApp\\TestApp.csproj|solutionrelative:testapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|e:\\cabinet\\github\\dotfiles\\vs_themes\\testapp\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 62,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:7:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SecureController.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Controllers\\SecureController.cs",
+              "RelativeDocumentMoniker": "TestApp\\Controllers\\SecureController.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Controllers\\SecureController.cs",
+              "RelativeToolTip": "TestApp\\Controllers\\SecureController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T03:24:39.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-10-12T03:09:55.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\ViewModels\\LoginModel.cs",
+              "RelativeDocumentMoniker": "TestApp\\ViewModels\\LoginModel.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\ViewModels\\LoginModel.cs",
+              "RelativeToolTip": "TestApp\\ViewModels\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:57:04.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\ViewModels\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "TestApp\\ViewModels\\RegisterModel.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\ViewModels\\RegisterModel.cs",
+              "RelativeToolTip": "TestApp\\ViewModels\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:56:50.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TestApp\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TestApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwEkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:56:05.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "TestApp\\Entities\\ApplicationUser.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "TestApp\\Entities\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:51:47.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "docker-compose",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-10-12T02:14:25.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Program.cs",
+              "RelativeDocumentMoniker": "TestApp\\Program.cs",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\Program.cs",
+              "RelativeToolTip": "TestApp\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T02:13:51.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TestApp\\appsettings.json",
+              "ToolTip": "E:\\Cabinet\\Github\\dotfiles\\VS_Themes\\TestApp\\TestApp\\appsettings.json",
+              "RelativeToolTip": "TestApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-12T02:10:00.707Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 338,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
