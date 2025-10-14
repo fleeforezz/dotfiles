@@ -1,0 +1,12 @@
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\bin\Debug\CursorLessDark.pkgdef
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\bin\Debug\CursorLessDarkTheme.vsix
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\bin\Debug\extension.vsixmanifest
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\CursorLessDarkTheme.csproj.AssemblyReference.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\_EmptyResource.resources
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\CursorLessDarkTheme.csproj.GenerateResource.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\CursorLessDarkTheme.csproj.CoreCompileInputs.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\CursorLessDarkTheme.dll
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\CursorLessDarkTheme.pdb
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\extension.vsixmanifest
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\files.json
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLessDarkTheme\CursorLessDarkTheme\obj\Debug\createTemplateManifests.cache
