@@ -1,0 +1,12 @@
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\bin\Debug\CursorLight.pkgdef
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\bin\Debug\CursorLight.vsix
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\bin\Debug\extension.vsixmanifest
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\CursorLight.csproj.AssemblyReference.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\_EmptyResource.resources
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\CursorLight.csproj.GenerateResource.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\CursorLight.csproj.CoreCompileInputs.cache
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\CursorLight.dll
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\CursorLight.pdb
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\extension.vsixmanifest
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\files.json
+D:\Stuff\Github\dotfiles\VS_Themes\CursorLight\CursorLight\obj\Debug\createTemplateManifests.cache
