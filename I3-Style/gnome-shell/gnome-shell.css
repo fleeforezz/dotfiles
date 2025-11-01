@@ -111,7 +111,9 @@
   icon-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Top Bar */
+/* 
+* =================== Start Top Bar ================ 
+*/
 #panel {
   /* background-color: rgba(0, 0, 0, 0.39); */
   background-color: transparent;
@@ -126,7 +128,7 @@
 #panel .panel-button {
   background-color: #000000;
   border-radius: 0.6em;
-  color: #f598bc;
+  color: #a4a4a6;
 }
 
 #panel .panel-corner {
@@ -151,18 +153,18 @@
 
 #panel .panel-button:hover {
   background-color: #0a0708;
-  color: #f598bc;
+  color: #a4a4a6;
 }
 
 #panel .panel-button:hover.clock-display {
   box-shadow: none;
-  color: #ffb85c;
+  color: #a4a4a6;
   background-color: #0a0708;
 
 }
 
 #panel .panel-button.clock-display {
-  color: #ffb85c;
+  color: #a4a4a6;
 }
 
 #panel .panel-button:hover.clock-display .clock {
@@ -211,7 +213,7 @@
   border-radius: 1.3px;
   min-width: 8px;
   min-height: 8px;
-  background-color: #41e8dc;
+  background-color: #a4a4a6;
 }
 
 #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
@@ -281,8 +283,13 @@
 #panel .remote-access-indicator {
   color: #8c6c3e;
 }
+/* 
+* =================== End Top Bar ================ 
+*/
 
-/* Popovers/Menus */
+/* 
+* =================== Start Popovers/Menus ================ 
+*/
 .popup-menu-boxpointer {
   -arrow-border-radius: 18px;
   -arrow-background-color: transparent;
@@ -644,19 +651,21 @@ StScrollBar StButton#hhandle:active {
   -slider-border-width: 2px;
   -slider-handle-radius: 7px;
   -slider-handle-border-width: 2px;
-  -slider-handle-border-color: #f3c2d5;
+  -slider-handle-border-color: #818181;
   -barlevel-height: 5px;
   -barlevel-background-color: rgba(233, 233, 237, 0.3);
   -barlevel-border-color: transparent;
-  -barlevel-active-background-color: #f3c2d5;
+  -barlevel-active-background-color: #818181;
   -barlevel-active-border-color: transparent;
-  -barlevel-overdrive-color: #f3c2d5;
+  -barlevel-overdrive-color: #818181;
   -barlevel-overdrive-border-color: transparent;
   -barlevel-overdrive-separator-width: 2px;
   -barlevel-border-width: 0;
 }
 
-/* App Switcher */
+/* 
+* =================== Start App Switcher ================ 
+*/
 .switcher-popup {
   padding: 8px;
   spacing: 24px;
@@ -676,7 +685,7 @@ StScrollBar StButton#hhandle:active {
 
 .switcher-list .item-box:selected {
   color: #412831;
-  background-color: #e76c9b;
+  background-color: #f10000;
 }
 
 .switcher-list .thumbnail-box {
@@ -715,6 +724,9 @@ StScrollBar StButton#hhandle:active {
 .cycler-highlight {
   border: 5px solid #27a1b9;
 }
+/* 
+* =================== End App Switcher ================ 
+*/
 
 /* Switches */
 .toggle-switch {
@@ -1191,9 +1203,11 @@ StScrollBar StButton#hhandle:active {
   font-weight: bold;
 }
 
-/* Dash */
+/* 
+* =================== Start Dash ================ 
+*/
 #dash {
-  margin-top: 1px;
+  margin: 2px;
 }
 
 #dash .dash-background {
@@ -1230,7 +1244,7 @@ StScrollBar StButton#hhandle:active {
 #dash .dash-item-container .show-apps .overview-icon,
 #dash .dash-item-container .overview-tile .overview-icon,
 #dash .dash-item-container .grid-search-result .overview-icon {
-  border-radius: 18px;
+  border-radius: 10px;
   padding: 6px;
   spacing: 6px;
   text-align: center;
@@ -1288,7 +1302,7 @@ StScrollBar StButton#hhandle:active {
 
 .dash-label {
   color: #e9e9ed;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.801);
   border-radius: 5px;
   padding: 6px 12px;
   box-shadow: none;
@@ -1297,8 +1311,13 @@ StScrollBar StButton#hhandle:active {
   -y-offset: 12px;
   -x-offset: 8px;
 }
+/* 
+* =================== End Dash ================ 
+*/
 
-/* Message List */
+/* 
+* =================== Start Message List ================ 
+*/
 .message-list {
   width: 29em;
   text-shadow: none;
@@ -1567,8 +1586,13 @@ StScrollBar StButton#hhandle:active {
 .calendar .calendar-change-month-forward {
   padding: 0 2px;
 }
+/* 
+* =================== End Message List ================ 
+*/
 
-/* Notifications & Message Tray */
+/* 
+* =================== Start Notifications & Message Tray ================ 
+*/
 .notification-banner {
   min-height: 64px;
   width: 34em;
@@ -1725,12 +1749,20 @@ StScrollBar StButton#hhandle:active {
   icon-size: 16px !important;
   width: 16px;
 }
+/* 
+* =================== End Notifications & Message Tray ================ 
+*/
 
-/* Quick Settings */
+/* 
+* =================== Start Quick Settings ================ 
+*/
 .quick-settings {
   padding: 18px !important;
   border-radius: 9.6px !important;
   margin-top: 6px !important;
+
+  background-color: rgba(32, 32, 32, 0.158);
+  backdrop-filter: blur(18px) saturate(180%);
 }
 
 .quick-settings .icon-button, .quick-settings .background-app-item .close-button, .background-app-item .quick-settings .close-button, .quick-settings .message .message-header .message-expand-button, .message .message-header .quick-settings .message-expand-button,
@@ -1777,17 +1809,17 @@ StScrollBar StButton#hhandle:active {
 }
 
 .quick-toggle:checked {
-  background-color: #f3c2d5 !important;
+  background-color: #818181 !important;
   color: #1a1b26;
 }
 
 .quick-toggle:checked:hover {
-  background-color: #f7dce6 !important;
+  background-color: #696969 !important;
   color: #1a1b26;
 }
 
 .quick-toggle:checked:active {
-  background-color: #f3c2d5 !important;
+  background-color: #818181 !important;
   color: #1a1b26;
 }
 
@@ -1870,17 +1902,17 @@ StScrollBar StButton#hhandle:active {
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked {
-  background-color: #f3c2d5 !important;
+  background-color: #818181 !important;
   color: #1a1b26;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:hover {
-  background-color: #f7dce6 !important;
+  background-color: #696969 !important;
   color: #1a1b26;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:active {
-  background-color: #f3c2d5 !important;
+  background-color: #818181 !important;
   color: #1a1b26;
 }
 
@@ -1916,8 +1948,8 @@ StScrollBar StButton#hhandle:active {
 .quick-slider .message .message-header .message-close-button,
 .message .message-header .quick-slider .message-close-button {
   background-color: rgba(233, 233, 237, 0.08) !important;
-  color: #f598bc !important;
-  border-radius: 12px;
+  color: #c4c4c4 !important;
+  border-radius: 8px;
   padding: 9px;
 }
 
@@ -1942,11 +1974,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .quick-toggle-menu .popup-menu-item {
-  border-radius: 9.6px !important;
+  border-radius: 5.6px !important;
 }
 
 .quick-toggle-menu .popup-menu-item:focus, .quick-toggle-menu .popup-menu-item:hover, .quick-toggle-menu .popup-menu-item.selected {
-  color: #f3c2d5 !important;
+  color: #c4c4c4 !important;
   background-color: rgba(233, 233, 237, 0.1) !important;
 }
 
@@ -1967,13 +1999,13 @@ StScrollBar StButton#hhandle:active {
 
 .quick-toggle-menu .header .icon {
   icon-size: 24px;
-  border-radius: 12px;
+  border-radius: 9px;
   padding: 9px;
   background-color: rgba(233, 233, 237, 0.12) !important;
 }
 
 .quick-toggle-menu .header .icon.active {
-  background-color: #f3c2d5 !important;
+  background-color: #818181 !important;
   color: #000000;
 }
 
@@ -1985,8 +2017,8 @@ StScrollBar StButton#hhandle:active {
 .quick-settings-system-item .message .message-header .message-close-button,
 .message .message-header .quick-settings-system-item .message-close-button {
   background-color: #292929;
-  color: #f3c2d5 !important;
-  border-radius: 9.6px;
+  color: #c4c4c4 !important;
+  border-radius: 5.6px;
 }
 
 .quick-settings-system-item .icon-button > StIcon, .quick-settings-system-item .background-app-item .close-button > StIcon, .background-app-item .quick-settings-system-item .close-button > StIcon, .quick-settings-system-item .message .message-header .message-expand-button > StIcon, .message .message-header .quick-settings-system-item .message-expand-button > StIcon,
@@ -1997,7 +2029,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .quick-settings-system-item .power-item {
-  color: #f3c2d5 !important;
+  color: #c4c4c4 !important;
   min-height: 0;
   min-width: 0;
 }
@@ -2052,6 +2084,9 @@ StScrollBar StButton#hhandle:active {
   margin-top: 24px;
   margin-bottom: 6px;
 }
+/* 
+* =================== End Quick Settings ================ 
+*/
 
 /* Search */
 .list-search-result, .search-provider-icon {
@@ -2151,7 +2186,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .screenshot-ui-panel {
-  border-radius: 39px;
+  border-radius: 16px;
   padding: 18px;
   padding-bottom: 12px;
   margin-bottom: 4em;
