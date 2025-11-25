@@ -1,0 +1,12 @@
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\bin\Debug\Min.vsix
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\bin\Debug\extension.vsixmanifest
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\Min.csproj.AssemblyReference.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\_EmptyResource.resources
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\Min.csproj.GenerateResource.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\Min.csproj.CoreCompileInputs.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\Min.dll
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\Min.pdb
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\extension.vsixmanifest
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\files.json
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\obj\Debug\createTemplateManifests.cache
+E:\Cabinet\Github\dotfiles\VS_Themes\Min\Min\bin\Debug\Min.pkgdef
