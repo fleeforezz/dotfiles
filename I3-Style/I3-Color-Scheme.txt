@@ -1,0 +1,11 @@
+Background-color: #0c0b16
+Text-Color: #a8a7c7 / 168,167,199,255
+Secondary-background-color: #1c1a35
+Background-hover: #151427
+
+Button-Background-color: #c9b4ff
+Button-Text-color: #391244 / 57,18,68,255
+
+Border: 2px solid #6b657e
+
+
