@@ -1,0 +1,660 @@
+/* Hyprland Arch Linux Style GTK 4.0 Theme */
+
+/* Color Palette - Hyprland/Arch Aesthetic */
+@define-color base #0c0b16;
+@define-color mantle #1c1a35;
+@define-color crust #11111b;
+
+@define-color surface0 #1c1a35;
+@define-color surface1 #151427;
+@define-color surface2 #6b657e;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color subtext0 #a8a7c7;
+@define-color subtext1 #bac2de;
+@define-color text #a8a7c7;
+
+@define-color accent #c9b4ff;
+@define-color accent_fg #391244;
+@define-color border_color #6b657e;
+
+@define-color blue #89b4fa;
+@define-color green #a6e3a1;
+@define-color yellow #f9e2af;
+@define-color red #f38ba8;
+@define-color mauve #cba6f7;
+
+/* Standard GTK color variables */
+@define-color theme_bg_color @base;
+@define-color theme_fg_color @text;
+@define-color theme_base_color @base;
+@define-color theme_text_color @text;
+@define-color theme_selected_bg_color @accent;
+@define-color theme_selected_fg_color @accent_fg;
+@define-color insensitive_bg_color @surface0;
+@define-color insensitive_fg_color @overlay0;
+@define-color borders @border_color;
+@define-color warning_color @yellow;
+@define-color error_color @red;
+@define-color success_color @green;
+
+/* === BASE WINDOW STYLING === */
+window {
+    background-color: @base;
+    color: @text;
+    border: 2px solid @border_color;
+}
+
+window.background {
+    background-color: @base;
+}
+
+/* CSD Windows - Hyprland style with gaps */
+window.csd {
+    border-radius: 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid @border_color;
+    margin: 10px;
+}
+
+/* === HEADER BAR - Hyprland Top Bar Style === */
+headerbar {
+    background: @base;
+    color: @text;
+    border-bottom: none;
+    border-radius: 0px;
+    padding: 4px 12px;
+    min-height: 42px;
+}
+
+headerbar:backdrop {
+    background: @mantle;
+    opacity: 0.9;
+}
+
+/* headerbar button {
+    margin: 2px;
+    border-radius: 50px;
+    border: 2px solid @border_color;
+} */
+
+/* Window Controls - macOS/Hyprland style */
+/* windowcontrols button {
+    min-width: 14px;
+    min-height: 14px;
+    padding: 0;
+    margin: 0 4px;
+    border-radius: 50%;
+    border: none;
+}
+
+windowcontrols button.close {
+    background: @red;
+    color: @base;
+}
+
+windowcontrols button.close:hover {
+    background: lighten(@red, 10%);
+    box-shadow: 0 0 8px alpha(@red, 0.5);
+}
+
+windowcontrols button.minimize {
+    background: @yellow;
+    color: @base;
+}
+
+windowcontrols button.minimize:hover {
+    background: lighten(@yellow, 10%);
+    box-shadow: 0 0 8px alpha(@yellow, 0.5);
+}
+
+windowcontrols button.maximize {
+    background: @green;
+    color: @base;
+}
+
+windowcontrols button.maximize:hover {
+    background: lighten(@green, 10%);
+    box-shadow: 0 0 8px alpha(@green, 0.5);
+} */
+
+/* === BUTTONS - Modern Hyprland Style === */
+/* button {
+    background: @accent;
+    color: @accent_fg;
+    border: 2px solid @border_color;
+    border-radius: 500px;
+    padding: 8px 16px;
+    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    font-weight: 500;
+}
+
+button:hover {
+    background: lighten(@accent, 5%);
+    border-color: @accent;
+    box-shadow: 0 0 12px alpha(@accent, 0.4);
+    transform: translateY(-1px);
+}
+
+button:active {
+    background: darken(@accent, 5%);
+    transform: translateY(0);
+    box-shadow: 0 0 8px alpha(@accent, 0.3);
+}
+
+button:checked {
+    background: @mauve;
+    color: @accent_fg;
+    border-color: @mauve;
+    box-shadow: 0 0 12px alpha(@mauve, 0.5);
+}
+
+button:disabled {
+    background: @surface1;
+    color: @overlay0;
+    opacity: 0.5;
+    border-color: @surface2;
+}
+
+button.suggested-action {
+    background: @blue;
+    color: @base;
+    border-color: @blue;
+}
+
+button.suggested-action:hover {
+    background: lighten(@blue, 10%);
+    box-shadow: 0 0 15px alpha(@blue, 0.6);
+}
+
+button.destructive-action {
+    background: @red;
+    color: @base;
+    border-color: @red;
+}
+
+button.destructive-action:hover {
+    background: lighten(@red, 10%);
+    box-shadow: 0 0 15px alpha(@red, 0.6);
+}
+
+button.flat {
+    background: transparent;
+    border: none;
+} */
+
+/* button.flat:hover {
+    background: @surface1;
+    box-shadow: none;
+} */
+
+/* === ENTRY FIELDS - Clean Input Style === */
+/* entry {
+    background-color: @surface0;
+    color: @text;
+    border: 2px solid @border_color;
+    border-radius: 10px;
+    padding: 10px 12px;
+    caret-color: @accent;
+    transition: all 200ms ease;
+}
+
+entry:focus {
+    border-color: @accent;
+    background-color: @mantle;
+    box-shadow: 0 0 0 3px alpha(@accent, 0.2);
+}
+
+entry:disabled {
+    background-color: @surface1;
+    color: @overlay0;
+}
+
+entry.error {
+    border-color: @red;
+}
+
+entry.warning {
+    border-color: @yellow;
+}
+
+entry selection {
+    background-color: @accent;
+    color: @accent_fg;
+} */
+
+/* === TEXT VIEW === */
+/* textview {
+    background-color: @base;
+    color: @text;
+}
+
+textview text {
+    background-color: @base;
+    color: @text;
+}
+
+textview text selection {
+    background-color: @accent;
+    color: @accent_fg;
+} */
+
+/* === SCROLLBARS - Minimal Hyprland Style === */
+/* scrollbar {
+    background: transparent;
+    transition: all 300ms ease;
+}
+
+scrollbar slider {
+    background-color: alpha(@overlay0, 0.4);
+    border-radius: 12px;
+    min-width: 8px;
+    min-height: 40px;
+    margin: 2px;
+    transition: all 200ms ease;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(@accent, 0.6);
+    min-width: 10px;
+}
+
+scrollbar slider:active {
+    background-color: @accent;
+}
+
+scrollbar.horizontal slider {
+    min-width: 40px;
+    min-height: 8px;
+}
+
+scrollbar.horizontal slider:hover {
+    min-height: 10px;
+} */
+
+/* === CHECKBOXES === */
+/* checkbutton check {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 6px;
+    min-width: 20px;
+    min-height: 20px;
+    transition: all 200ms ease;
+}
+
+checkbutton:hover check {
+    border-color: @accent;
+    background-color: @surface1;
+}
+
+checkbutton:checked check {
+    background-color: @accent;
+    border-color: @accent;
+    -gtk-icon-source: -gtk-icontheme("check-symbolic");
+    color: @accent_fg;
+} */
+
+/* === RADIO BUTTONS === */
+/* radiobutton radio {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    transition: all 200ms ease;
+}
+
+radiobutton:hover radio {
+    border-color: @accent;
+    background-color: @surface1;
+}
+
+radiobutton:checked radio {
+    background-color: @accent;
+    border-color: @accent;
+    -gtk-icon-source: -gtk-icontheme("radio-checked-symbolic");
+    color: @accent_fg;
+} */
+
+/* === SWITCHES - Modern Toggle === */
+/* switch {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 50px;
+    min-width: 10px;
+    min-height: 10px;
+    transition: all 200ms ease;
+}
+
+switch:checked {
+    background-color: @accent;
+    border-color: @accent;
+}
+
+switch slider {
+    background-color: @text;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    margin: 2px;
+    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+switch:checked slider {
+    background-color: @accent_fg;
+} */
+
+/* === PROGRESS BARS === */
+/* progressbar {
+    background-color: @surface0;
+    border-radius: 10px;
+    border: 2px solid @border_color;
+}
+
+progressbar progress {
+    background: linear-gradient(90deg, @accent, @mauve, @blue);
+    border-radius: 8px;
+    min-height: 8px;
+}
+
+progressbar trough {
+    background-color: @surface0;
+    border-radius: 8px;
+} */
+
+/* === LEVEL BARS === */
+/* levelbar trough {
+    background-color: @surface0;
+    border-radius: 8px;
+    border: 2px solid @border_color;
+}
+
+levelbar block.filled {
+    background-color: @accent;
+    border-radius: 6px;
+}
+
+levelbar block.empty {
+    background-color: @surface0;
+} */
+
+/* === MENUS - Dropdown Style === */
+/* menubar {
+    background-color: @mantle;
+    color: @text;
+    padding: 4px;
+    border-bottom: 2px solid @border_color;
+}
+
+menubar > item {
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 150ms ease;
+}
+
+menubar > item:hover {
+    background-color: @surface0;
+    color: @accent;
+}
+
+menu {
+    background-color: @surface0;
+    color: @text;
+    border: 2px solid @border_color;
+    border-radius: 12px;
+    padding: 6px;
+    margin: 4px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+menuitem {
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 150ms ease;
+}
+
+menuitem:hover {
+    background-color: @accent;
+    color: @accent_fg;
+}
+
+menuitem:disabled {
+    color: @overlay0;
+} */
+
+/* === POPOVERS === */
+/* popover {
+    background-color: @surface0;
+    color: @text;
+    border: 2px solid @border_color;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+popover > contents {
+    background: transparent;
+} */
+
+/* === NOTEBOOKS (TABS) - Chrome-like === */
+/* notebook {
+    background-color: @base;
+}
+
+notebook > header {
+    background-color: @mantle;
+    border-bottom: 2px solid @border_color;
+}
+
+notebook > header > tabs > tab {
+    background-color: @surface0;
+    color: @subtext0;
+    border: 2px solid @border_color;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 18px;
+    margin: 2px 2px 0 2px;
+    transition: all 200ms ease;
+}
+
+notebook > header > tabs > tab:hover {
+    background-color: @surface1;
+    color: @text;
+}
+
+notebook > header > tabs > tab:checked {
+    background-color: @base;
+    color: @accent;
+    border-bottom: 2px solid @accent;
+    box-shadow: 0 -2px 8px alpha(@accent, 0.3);
+} */
+
+/* === SIDEBARS - Hyprland Split Style === */
+/* .sidebar {
+    background-color: @mantle;
+    border-right: 2px solid @border_color;
+}
+
+.sidebar row {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 4px 6px;
+    transition: all 150ms ease;
+}
+
+.sidebar row:hover {
+    background-color: @surface0;
+    transform: translateX(2px);
+}
+
+.sidebar row:selected {
+    background-color: @accent;
+    color: @accent_fg;
+    box-shadow: 0 0 12px alpha(@accent, 0.4);
+} */
+
+/* === TOOLTIPS === */
+/* tooltip {
+    background-color: @surface0;
+    color: @text;
+    border: 2px solid @border_color;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+tooltip.background {
+    background-color: @surface0;
+} */
+
+/* === SEPARATORS === */
+/* separator {
+    background-color: @border_color;
+    min-width: 2px;
+    min-height: 2px;
+} */
+
+/* === SPINBUTTONS === */
+/* spinbutton {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 10px;
+}
+
+spinbutton:focus {
+    border-color: @accent;
+}
+
+spinbutton button {
+    background: transparent;
+    border: none;
+    color: @text;
+    border-radius: 8px;
+}
+
+spinbutton button:hover {
+    background: @surface1;
+    color: @accent;
+} */
+
+/* === SCALES (SLIDERS) === */
+/* scale {
+    min-height: 20px;
+}
+
+scale trough {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 10px;
+    min-height: 8px;
+}
+
+scale highlight {
+    background: linear-gradient(90deg, @accent, @mauve);
+    border-radius: 8px;
+}
+
+scale slider {
+    background-color: @accent;
+    border: 2px solid @border_color;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    box-shadow: 0 2px 8px alpha(@accent, 0.4);
+    transition: all 200ms ease;
+}
+
+scale slider:hover {
+    background-color: lighten(@accent, 10%);
+    box-shadow: 0 0 12px alpha(@accent, 0.6);
+    transform: scale(1.1);
+} */
+
+/* === LISTS === */
+list {
+    background-color: @base;
+    border: 2px solid @border_color;
+    border-radius: 0px;
+}
+
+list row {
+    padding: 0px 10px 0px 10px;
+    border-radius: 0px;
+    margin: 2px 10px;
+    transition: all 150ms ease;
+}
+
+list row:hover {
+    background-color: @surface0;
+}
+
+list row:selected {
+    background-color: @accent;
+    color: @accent_fg;
+}
+
+/* === DROPDOWNS === */
+dropdown {
+    background-color: @surface0;
+    border: 2px solid @border_color;
+    border-radius: 0px;
+}
+
+dropdown:hover {
+    border-color: @accent;
+}
+
+dropdown popover {
+    padding: 6px;
+}
+
+/* === SEARCH BARS === */
+/* searchbar {
+    background-color: @mantle;
+    border-bottom: 2px solid @border_color;
+    padding: 8px;
+} */
+
+/* === INFO/WARNING/ERROR BARS === */
+/* .info {
+    background-color: @blue;
+    color: @base;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.warning {
+    background-color: @yellow;
+    color: @base;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.error {
+    background-color: @red;
+    color: @base;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.success {
+    background-color: @green;
+    color: @base;
+    border-radius: 8px;
+    padding: 8px;
+} */
+
+/* === HYPRLAND-SPECIFIC EFFECTS === */
+/* Floating window effect */
+.floating {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    border: 2px solid @border_color;
+}
+
+/* Smooth animations */
+/* * {
+    transition: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+} */
