@@ -1,0 +1,12 @@
+[org/gnome/terminal/legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='#cdd6f4'
+background-color='#1e1e2e'
+use-theme-colors=false
+bold-color='#cdd6f4'
+bold-color-same-as-fg=false
+use-theme-transparency=false
+visible-name='Catppuccin Mocha'
+palette=['#45475a', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#cba6f7', '#94e2d5', '#bac2de', '#585b70', '#f38ba8', '#a6e3a1', '#f9e2af', '#89b4fa', '#cba6f7', '#94e2d5', '#a6adc8']
