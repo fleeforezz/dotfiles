@@ -1,0 +1,12 @@
+[org/gnome/terminal/legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+foreground-color='#abb2bf'
+background-color='#16191d'
+use-theme-colors=false
+bold-color='#abb2bf'
+bold-color-same-as-fg=false
+use-theme-transparency=false
+visible-name='One Dark Pro Night Flat'
+palette=['#3f4451', '#e05561', '#8cc265', '#d18f52', '#4aa5f0', '#c162de', '#42b3c2', '#d7dae0', '#4f5666', '#ff616e', '#a5e075', '#f0a45d', '#4dc4ff', '#de73ff', '#4cd1e0', '#e6e6e6']

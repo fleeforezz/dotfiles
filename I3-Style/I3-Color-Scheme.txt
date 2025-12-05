@@ -7,5 +7,3 @@ Button-Background-color: #c9b4ff
 Button-Text-color: #391244 / 57,18,68,255
 
 Border: 2px solid #6b657e
-
-
