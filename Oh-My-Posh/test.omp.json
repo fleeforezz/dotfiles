@@ -1,0 +1,81 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "style": "plain",
+                    "template": "\u256d\u2500",
+                    "type": "text"
+                },
+                {
+                    "style": "plain",
+                    "template": " \uf292 ",
+                    "type": "root"
+                },
+                {
+                    "style": "plain",
+                    "template": " {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "background": "#17D7A0",
+                    "foreground": "#011627",
+                    "leading_diamond": "\ue0b6",
+                    "properties": {
+                        "branch_icon": "  \ue725 ",
+                        "fetch_stash_count": true,
+                        "fetch_status": true,
+                        "fetch_upstream_icon": true,
+                        "fetch_worktree_count": true
+                    },
+                    "style": "diamond",
+                    "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+                    "trailing_diamond": "",
+                    "type": "git"
+                },
+                {
+                    "foreground": "#a6e3a1",
+                    "style": "plain",
+                    "properties": {
+                        "style": "roundrock",
+                        "threshold": 0
+                    },
+                    "template": " {{ .FormattedMs }} ",
+                    "type": "executiontime"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "plain",
+                    "template": "\u2570\u2500",
+                    "type": "status"
+                },
+                {
+                   "foreground": "#a6e3a1",
+                   "style": "plain",
+                   "template": " ",
+                   "type": "text"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "transient_prompt": {
+        "background": "transparent",
+        "foreground": "#FEF5ED",
+        "template": "\ue285 "
+    },
+    "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.UserName}} \u2794 📁{{.Folder}}",
+    "version": 3
+}
