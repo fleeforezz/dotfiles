@@ -1,19 +1,3 @@
-#!/usr/bin/env bash
-
-## Author : Aditya Shakya (adi1090x)
-## Github : @adi1090x
-#
-## Rofi   : Launcher (Modi Drun, Run, File Browser, Window)
-#
-## Available Styles
-#
-## style-1     style-2     style-3     style-4     style-5
-## style-6     style-7     style-8     style-9     style-10
-
-dir="$HOME/.config/rofi/launchers/type-7"
-theme='style-1'
-
-## Run
-rofi \
-    -show drun \
-    -theme ${dir}/${theme}.rasi
+version https://git-lfs.github.com/spec/v1
+oid sha256:38307691ff4956294b783ac63f3d0575b74fc0dd8263e2c71be64009a415d1ef
+size 408
