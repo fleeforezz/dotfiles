@@ -72,4 +72,14 @@ else
     echo "fcitx5 is already installed."
 fi 
 
+# Install Google Material Icons if not installed
+echo "Installing Google Material Icons..."
+if ! fc-list | grep -q "Material Symbols"; then
+    echo "Material Symbols font not found. Installing..."
+    yay -S ttf-material-symbols-variable -y
+else
+    echo "Material Symbols font is already installed."
+fi
+
+
 echo "Installation script completed."

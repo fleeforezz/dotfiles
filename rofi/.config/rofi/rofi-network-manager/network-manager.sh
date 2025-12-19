@@ -18,43 +18,50 @@ SECURED_SIGNAL_ICONS=("󰤡 " "󰤤 " "󰤧 " "󰤪 ")
 WIFI_CONNECTED_ICON=" "
 ETHERNET_CONNECTED_ICON=" "
 
+SSID=$(get_connected_wifi)
+
 get_connected_wifi() {
     nmcli -t -f ACTIVE,SSID dev wifi | grep '^yes:' | cut -d: -f2
 }
 
-SSID=$(get_connected_wifi)
-
 get_status() {
-    if nmcli -t -f TYPE,STATE device status | grep 'ethernet:connected' > /dev/null; then
-        local status_icon="󰈀"
-        local status_color=$ENABLED_COLOR
-    elif nmcli -t -f TYPE,STATE device status | grep 'wifi:connected' > /dev/null; then
-        local wifi_info=$(nmcli --terse --fields "IN-USE,SIGNAL,SECURITY,SSID" device wifi list --rescan no | grep '\*')
-        if [ -n "$wifi_info" ]; then
-            IFS=: read -r in_use signal security ssid <<< "$wifi_info"
-            local signal_icon="${SIGNAL_ICONS[3]}"
-            local signal_level=$((signal / 25))
-            if [[ "$signal_level" -lt "${#SIGNAL_ICONS[@]}" ]]; then
-                signal_icon="${SIGNAL_ICONS[$signal_level]}"
-            fi
-            if [[ "$security" =~ WPA || "$security" =~ WEP ]]; then
-                signal_icon="${SECURED_SIGNAL_ICONS[$signal_level]}"
-            fi
-            status_icon="$signal_icon"
-            local status_color=$ENABLED_COLOR
-        else
-            status_icon=" "
-            local status_color=$DISABLED_COLOR
-        fi
+    local eth_dev wifi_dev status_icon status_color text
+
+    eth_dev=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ':ethernet:connected' | cut -d: -f1)
+    wifi_dev=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ':wifi:connected' | cut -d: -f1)
+
+    # Ethernet has priority
+    if [[ -n "$eth_dev" ]]; then
+        status_icon="󰈀"        # Ethernet icon
+        status_color=$ENABLED_COLOR
+        text="Wired ($eth_dev)"
+
+    elif [[ -n "$wifi_dev" ]]; then
+        local wifi_info signal security ssid signal_icon signal_level
+
+        wifi_info=$(nmcli --terse --fields IN-USE,SIGNAL,SECURITY,SSID device wifi list --rescan no | grep '^\*')
+        IFS=: read -r _ signal security ssid <<< "$wifi_info"
+
+        signal_level=$((signal / 25))
+        signal_icon="${SIGNAL_ICONS[3]}"
+        [[ "$signal_level" -lt "${#SIGNAL_ICONS[@]}" ]] && signal_icon="${SIGNAL_ICONS[$signal_level]}"
+
+        [[ "$security" =~ WPA|WEP ]] && signal_icon="${SECURED_SIGNAL_ICONS[$signal_level]}"
+
+        status_icon="$signal_icon"
+        status_color=$ENABLED_COLOR
+        text="$ssid"
+
     else
-        local status_icon=" "
-        local status_color=$DISABLED_COLOR
+        status_icon=" "
+        status_color=$DISABLED_COLOR
+        text="Disconnected"
     fi
 
     if [[ "$SESSION_TYPE" == "wayland" ]]; then
-        echo "<span color=\"$status_color\">$status_icon $SSID</span>"
-    elif [[ "$SESSION_TYPE" == "x11" ]]; then
-        echo "%{F$status_color}$status_icon $SSID%{F-}"
+        echo "<span color=\"$status_color\">$status_icon $text</span>"
+    else
+        echo "%{F$status_color}$status_icon $text%{F-}"
     fi
 }
 
@@ -155,6 +162,8 @@ manage_ethernet() {
     fi
 
     local eth_list=""
+    local active_ssid
+        active_ssid=$(get_connected_wifi)
     for dev in $eth_devices; do
         local dev_status=$(nmcli device status | grep "$dev" | awk '{print $3}')
         if [ "$dev_status" = "connected" ]; then

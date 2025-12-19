@@ -21,7 +21,7 @@
     ],
 
     "cpu": {
-        "interval": 10,
+        "interval": 5,
         "format": " {}%",
         "max-length": 10
     },
@@ -80,40 +80,15 @@
             "Easy Effects Sink"
         ]
     },
-    // "bluetooth": {
-    //     // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    //     "format": "<span size='10pt'></span> {status}",
-    //     "format-disabled": "", // an empty format will hide the module
-    //     "format-connected": " {num_connections} connected",
-    //     "tooltip-format": "{controller_alias}\t{controller_address}",
-    //     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    //     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    //     "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
-    // },
     "bluetooth": {
-        // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
         "format": " {status}",
-        "format-disabled": "", // an empty format will hide the module
+        "format-disabled": "",
         "format-connected": " {num_connections} connected",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
     },
-    // "network": {
-    //     "interface": "wlan0",
-    //     "format": "{ifname}",
-    //     "format-wifi": "<span size='10pt'></span> {essid}",
-    //     "format-ethernet": "{ipaddr}/{cidr} 󰌗",
-    //     "format-disconnected": " no-internet", //An empty format will hide the module.
-    //     "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-    //     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-    //     "tooltip-format-ethernet": "{ifname} ",
-    //     "tooltip-format-disconnected": "Disconnected",
-    //     "max-length": 50,
-    //     // "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#a6e3a1\" | cat",
-    //     "onclick": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh"
-    // },
     "custom/networkmanager": {
         "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#c678dd\" | cat",
         "return-type": "raw",
