@@ -7,6 +7,8 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export PATH=$PATH:/home/jso/.local/bin
+export PATH=$PATH:/home/jso/.spicetify
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -107,6 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:/home/jso/.spicetify
+alias ls='exa -l'
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/test.omp.json)"
