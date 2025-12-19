@@ -1,0 +1,34 @@
+## Mini IDE configuration for nano
+
+# Show Line Numbers
+set linenumbers
+
+# Enable mouse control
+set mouse
+
+set softwrap
+
+## Automatically indent a newly created line to the same number of
+## tabs and/or spaces as the precending line -- or as the next line
+## if the precending line is the beginning of a paragraph.
+# Set Autoindent 
+set autoindent
+
+set tabsize 4
+
+set tabstospaces
+
+# set whitespace "trailing"
+
+# set backup
+
+set minibar
+
+set nohelp
+
+set breaklonglines
+
+set constantshow
+
+## Syntax highlighting
+include /usr/share/nano/*.nanorc
