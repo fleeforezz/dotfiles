@@ -8,7 +8,7 @@
         "tray"
     ],
     "modules-center": [
-        "custom/notification",
+        "clock",
         "hyprland/workspaces"
     ],
     "modules-right": [
@@ -16,7 +16,7 @@
         "bluetooth",
         "custom/networkmanager",
         "battery",
-        "clock",
+        "custom/notification",
         "custom/exit"
     ],
 
