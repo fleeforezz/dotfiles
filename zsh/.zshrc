@@ -110,5 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls='exa -l'
+alias upd='sudo apt update'
+alias uprd='sudo apt upgrade'
+alias tx='tmux'
+alias cls='clear'
 
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/test.omp.json)"
+
