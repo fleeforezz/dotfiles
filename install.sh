@@ -81,5 +81,20 @@ else
     echo "Material Symbols font is already installed."
 fi
 
+# Install hyperlock if not installed
+if ! command -v hyperlock &> /dev/null; then
+    echo "Installing hyperlock..."
+    sudo pacman -S hyperlock -y
+else
+    echo "hyperlock is already installed."
+fi
+
+# Install hypridle if not installed
+if ! command -v hypridle &> /dev/null; then
+    echo "Installing hypridle..."
+    sudo pacman -S hypridle -y
+else
+    echo "hypridle is already installed."
+fi
 
 echo "Installation script completed."
