@@ -47,9 +47,13 @@ tooltip label {
 }
 
 #workspaces button.active {
-    background-color: @blue;
+    background: linear-gradient(
+        135deg,
+        @blue,
+        @purple
+    );
     color: @bg0;
-    min-width: 25px;
+    min-width: 35px;
     transition: all 0.3s ease-in-out;
     font-size: 13px;
 }
@@ -78,7 +82,6 @@ tooltip label {
 #custom-networkmanager,
 #clock,
 #cpu,
-#disk,
 #custom-appmenu,
 #custom-exit,
 #custom-notification {
@@ -108,8 +111,8 @@ tooltip label {
     color: @yellow;
 }
 
-#disk {
-    color: @yellow;
+#cpu {
+    color: @green;
 }
 
 #network {

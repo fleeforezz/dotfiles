@@ -2,7 +2,7 @@
     "position": "top",
     "layer": "top",
     "height": 34,
-    "width": 940,
+    "width": 860,
     "spacing": 6,
     "fixed-center": false,
     "margin-top": 10,
@@ -29,7 +29,6 @@
     "modules-center": [
         "clock",
         "cpu",
-        "disk",
         "tray",
         "hyprland/workspaces",
         "pulseaudio",
@@ -54,11 +53,11 @@
         "max-length": 10
     },
 
-    "disk": {
-        "interval": 30,
-        "format": "<span size='10pt'></span> {percentage_free} %",
-        "path": "/"
-    },
+    // "disk": {
+    //     "interval": 30,
+    //     "format": "<span size='10pt'></span> {percentage_free} %",
+    //     "path": "/"
+    // },
 
     "custom/appmenu": {
         "format": "<span size='10pt'>󰊠</span>",
@@ -76,9 +75,7 @@
             "2": "",
             "3": "",
             "4": "",
-            "5": "",
-            "active": "",
-            "default": ""
+            "5": ""
         },
         "persistent-workspaces": {
             "*": 5, // 5 workspaces by default on every monitor
