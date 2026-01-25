@@ -41,8 +41,7 @@ tooltip label {
     padding: 0px 6px;
     margin: 0px 3px;
     border-radius: 50px;
-    color: transparent;
-    background-color: @bg1;
+    color: @fg2;
     transition: all 0.3s ease-in-out;
 }
 
@@ -77,6 +76,7 @@ tooltip label {
 
 #tray,
 #battery,
+#custom-spotify,
 #pulseaudio,
 #bluetooth,
 #custom-networkmanager,
@@ -93,6 +93,10 @@ tooltip label {
 
 #custom-appmenu {
     color: @blue;
+}
+
+#custom-spotify {
+    color: @green;
 }
 
 #bluetooth {

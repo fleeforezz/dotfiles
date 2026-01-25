@@ -2,8 +2,7 @@
     "position": "top",
     "layer": "top",
     "height": 34,
-    "width": 860,
-    "spacing": 6,
+    "width": 1000,
     "fixed-center": false,
     "margin-top": 10,
     // "modules-left": [
@@ -28,8 +27,8 @@
     // ],
     "modules-center": [
         "clock",
-        "cpu",
         "tray",
+        "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
         "bluetooth",
@@ -104,6 +103,16 @@
         "ignored-sinks": [
             "Easy Effects Sink"
         ]
+    },
+    "custom/spotify": {
+        "exec": "playerctl -p spotify metadata --format '{{ status }} {{ artist }} - {{ title }}'",
+        "interval": 1,
+        "return-type": "string",
+        "max-length": 20,
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify next",
+        "on-scroll-down": "playerctl -p spotify previous",
+        "format": " {}"
     },
     "bluetooth": {
         "format": " {status}",
