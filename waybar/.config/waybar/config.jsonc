@@ -1,17 +1,37 @@
 {
     "position": "top",
+    "layer": "top",
+    "height": 34,
+    "width": 940,
+    "spacing": 6,
+    "fixed-center": false,
     "margin-top": 10,
-    "modules-left": [
-        "custom/appmenu",
-        "cpu",
-        "disk",
-        "tray"
-    ],
+    // "modules-left": [
+    //     "custom/appmenu",
+    //     "cpu",
+    //     "disk",
+    //     "tray"
+    // ],
+    // "modules-center": [
+    //     "custom/appmenu",
+    //     "cpu",
+    //     "disk",
+    //     "tray",
+    //     "clock",
+    //     "hyprland/workspaces",
+    //     "pulseaudio",
+    //     "bluetooth",
+    //     "custom/networkmanager",
+    //     "battery",
+    //     "custom/notification",
+    //     "custom/exit"
+    // ],
     "modules-center": [
         "clock",
-        "hyprland/workspaces"
-    ],
-    "modules-right": [
+        "cpu",
+        "disk",
+        "tray",
+        "hyprland/workspaces",
         "pulseaudio",
         "bluetooth",
         "custom/networkmanager",
@@ -19,6 +39,14 @@
         "custom/notification",
         "custom/exit"
     ],
+    // "modules-right": [
+    //     "pulseaudio",
+    //     "bluetooth",
+    //     "custom/networkmanager",
+    //     "battery",
+    //     "custom/notification",
+    //     "custom/exit"
+    // ],
 
     "cpu": {
         "interval": 5,

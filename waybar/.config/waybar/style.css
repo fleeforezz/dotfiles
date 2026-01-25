@@ -1,4 +1,4 @@
-@import 'colors/one-dark.css';
+@import 'colors/rxyhmn.css';
 
 * {
     border: none;
@@ -13,7 +13,8 @@
 }
 
 window#waybar {
-    background: transparent;
+    background: @bg0;
+    border-radius: 18px;
 }
 
 tooltip {
@@ -83,9 +84,8 @@ tooltip label {
 #custom-notification {
     background-color: @bg0;
     padding: 0 10px 0 10px;
-    margin: 0 0 0 12px;
+    margin: 0 0 0 0px;
     border-radius: 50px;
-    border: 1px solid @bg1;
 }
 
 #custom-appmenu {
@@ -118,7 +118,7 @@ tooltip label {
 
 #custom-exit {
     color: @red;
-    margin: 0 12px 0 12px;
+    margin: 0 0 0 0px;
 }
 
 #battery {
