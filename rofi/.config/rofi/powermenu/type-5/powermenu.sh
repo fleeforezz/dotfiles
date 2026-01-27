@@ -13,13 +13,7 @@
 dir="$HOME/.config/rofi/powermenu/type-5"
 theme='style-2'
 
-# CMDs
-lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime -p | sed -e 's/up //g'`"
-host=`hostname`
-
 # Options
-hibernate=$'\ue630'
 shutdown=$'\ue8ac'
 reboot=$'\uf053'
 lock=$'\ue897'
@@ -56,7 +50,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$hibernate\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -97,9 +91,6 @@ case ${chosen} in
         ;;
     $reboot)
 		run_cmd --reboot
-        ;;
-    $hibernate)
-		run_cmd --hibernate
         ;;
     $lock)
 		if [[ -x '/usr/bin/betterlockscreen' ]]; then
