@@ -10,11 +10,11 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run";
-    show-icons:                 false;
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "";
-    display-window:             "";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -56,7 +56,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       500px;
+    height:                      600px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -65,11 +66,14 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               20px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
-    background-color:            @background-colour;
+    // background-color:            @background-colour;
+    background-color:            #10191C;
+    /* Translucent Background */
+    // background-color:            rgba(11, 14, 20, 0.21);
     /* Backgroud Image */
     //background-image:          url("/path/to/image.png", none);
     /* Simple Linear Gradient */
@@ -97,13 +101,13 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
+    margin:                      0px 0px 15px 0px;
+    padding:                     15px 15px 15px 15px;
+    border:                      2px solid;
+    border-radius:               10px;
+    border-color:                #242D30;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  #556488;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -165,7 +169,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     5px;
+    spacing:                     10px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -187,48 +191,48 @@ element {
     enabled:                     true;
     spacing:                     8px;
     margin:                      0px;
-    padding:                     8px;
+    padding:                     15px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            var(normal-background);
+    background-color:            transparent;
     text-color:                  var(normal-foreground);
 }
 element normal.urgent {
-    background-color:            var(urgent-background);
+    background-color:            transparent;
     text-color:                  var(urgent-foreground);
 }
 element normal.active {
-    background-color:            var(active-background);
+    background-color:            transparent;
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            var(normal-foreground);
-    text-color:                  var(normal-background);
+    background-color:            #1D2629;
+    text-color:                  #556488;
 }
 element selected.urgent {
-    background-color:            var(selected-urgent-background);
+    background-color:            transparent;
     text-color:                  var(selected-urgent-foreground);
 }
 element selected.active {
-    background-color:            var(selected-active-background);
+    background-color:            transparent;
     text-color:                  var(selected-active-foreground);
 }
 element alternate.normal {
-    background-color:            var(alternate-normal-background);
+    background-color:            transparent;
     text-color:                  var(alternate-normal-foreground);
 }
 element alternate.urgent {
-    background-color:            var(alternate-urgent-background);
+    background-color:            transparent;
     text-color:                  var(alternate-urgent-foreground);
 }
 element alternate.active {
-    background-color:            var(alternate-active-background);
+    background-color:            transparent;
     text-color:                  var(alternate-active-foreground);
 }
 element-icon {
@@ -248,7 +252,7 @@ element-text {
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     margin:                      0px;
     padding:                     0px;
@@ -261,7 +265,7 @@ mode-switcher{
 button {
     padding:                     8px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               10px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
