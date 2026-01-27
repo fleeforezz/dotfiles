@@ -17,6 +17,7 @@ SIGNAL_ICONS=("󰤟 " "󰤢 " "󰤥 " "󰤨 ")
 SECURED_SIGNAL_ICONS=("󰤡 " "󰤤 " "󰤧 " "󰤪 ")
 WIFI_CONNECTED_ICON=" "
 ETHERNET_CONNECTED_ICON=" "
+ROFI_THEME="$HOME/.config/rofi/rofi-network-manager/style.rasi"  # ADD THIS LINE
 
 SSID=$(get_connected_wifi)
 
@@ -66,14 +67,22 @@ get_status() {
 }
 
 manage_wifi() {
-    nmcli --terse --fields "IN-USE,SIGNAL,SECURITY,SSID" device wifi list > /tmp/wifi_list.txt
+    nmcli --terse --fields "IN-USE,SIGNAL,SECURITY,SSID" device wifi list --rescan no > /tmp/wifi_list.txt
 
+    local -A seen_ssids  # Use associative array to track seen SSIDs
     local ssids=()
     local formatted_ssids=()
-    local active_ssid=""
+    local active_ssid
+    active_ssid=$(get_connected_wifi)
 
     while IFS=: read -r in_use signal security ssid; do
-        if [ -z "$ssid" ]; then continue; fi # Пропускаем сети без SSID
+        if [ -z "$ssid" ]; then continue; fi
+        
+        # Skip if we've already seen this SSID
+        if [[ -n "${seen_ssids[$ssid]}" ]]; then
+            continue
+        fi
+        seen_ssids[$ssid]=1
 
         local signal_icon="${SIGNAL_ICONS[3]}"
         local signal_level=$((signal / 25))
@@ -85,14 +94,12 @@ manage_wifi() {
             signal_icon="${SECURED_SIGNAL_ICONS[$signal_level]}"
         fi
 
-        # Добавляем иконку подключения, если сеть активна
+        # Add connection icon if network is active
         local formatted="$signal_icon $ssid"
-        local active_ssid
-        active_ssid=$(get_connected_wifi)
         if [[ "$ssid" == "$active_ssid" ]]; then
-            active_ssid="$ssid"
             formatted="$WIFI_CONNECTED_ICON $formatted"
         fi
+        
         ssids+=("$ssid")
         formatted_ssids+=("$formatted")
     done < /tmp/wifi_list.txt
@@ -104,7 +111,7 @@ manage_wifi() {
 
     formatted_list=$(printf "%s" "$formatted_list")
 
-    local chosen_network=$(echo -e "$formatted_list" | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: ")
+    local chosen_network=$(echo -e "$formatted_list" | rofi -dmenu -theme "$ROFI_THEME" -i -selected-row 1 -p "Wi-Fi SSID: ")
     local ssid_index=-1
     for i in "${!formatted_ssids[@]}"; do
         if [[ "${formatted_ssids[$i]}" == "$chosen_network" ]]; then
@@ -119,18 +126,18 @@ manage_wifi() {
         rm /tmp/wifi_list.txt
         return
     else
-        # Проверяем состояние выбранной сети
+        # Check the state of the selected network
         local device_status=$(nmcli -t -f STATE device show wlan0 | grep STATE | cut -d: -f2)
 
-        # Определяем действие в зависимости от состояния сети
+        # Determine action based on network state
         local action
         if [[ "$chosen_id" == "$active_ssid" ]]; then
-            action="  Disconnect"
+            action="  Disconnect"
         else
             action="󰸋  Connect"
         fi
 
-        action=$(echo -e "$action\n  Forget" | rofi -dmenu -p "Action: ")
+        action=$(echo -e "$action\n  Forget" | rofi -dmenu -theme "$ROFI_THEME" -p "Action: ")
         case $action in
             "󰸋  Connect")
                 local success_message="You are now connected to the Wi-Fi network \"$chosen_id\"."
@@ -138,14 +145,14 @@ manage_wifi() {
                 if [[ $(echo "$saved_connections" | grep -Fx "$chosen_id") ]]; then
                     nmcli connection up id "$chosen_id" | grep "successfully" && notify-send "Connection Established" "$success_message"
                 else
-                    local wifi_password=$(rofi -dmenu -p "Password: " -password)
+                    local wifi_password=$(rofi -dmenu -theme "$ROFI_THEME" -p "Password: " -password)
                     nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
                 fi
                 ;;
-            "  Disconnect")
+            "  Disconnect")
                 nmcli device disconnect wlan0 && notify-send "Disconnected" "You have been disconnected from $chosen_id."
                 ;;
-            "  Forget")
+            "  Forget")
                 nmcli connection delete id "$chosen_id" && notify-send "Forgotten" "The network $chosen_id has been forgotten."
                 ;;
         esac
@@ -173,7 +180,7 @@ manage_ethernet() {
         fi
     done
 
-    local chosen_device=$(echo -e "$eth_list" | rofi -dmenu -i -p "Select Ethernet device: ")
+    local chosen_device=$(echo -e "$eth_list" | rofi -dmenu -theme ~/.config/rofi/rofi-network-manager/style.rasi -i -p "Select Ethernet device: ")
 
     if [ -z "$chosen_device" ]; then
         return
@@ -244,7 +251,7 @@ main_menu() {
 
     ##==> Выводим Rofi меню
     #######################################################
-    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu -p " Network Management: ")
+    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu -theme ~/.config/rofi/rofi-network-manager/style.rasi -p " Network Management: ")
     case $chosen_option in
         "$wifi_toggle")
             nmcli radio wifi $wifi_toggle_command
