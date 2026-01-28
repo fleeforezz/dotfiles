@@ -45,19 +45,16 @@
     //     "custom/notification",
     //     "custom/exit"
     // ],
-
     // "cpu": {
     //     "interval": 5,
     //     "format": " {}%",
     //     "max-length": 10
     // },
-
     // "disk": {
     //     "interval": 30,
     //     "format": "<span size='10pt'></span> {percentage_free} %",
     //     "path": "/"
     // },
-
     // "custom/appmenu": {
     //     "format": "<span size='10pt'>󰊠</span>",
     //     "on-click": "~/.config/rofi/launchers/type-6/launcher.sh || pkill rofi"
@@ -65,7 +62,22 @@
     "clock": {
         "interval": 60,
         "format": "<span size='10pt'></span> {:%H:%M}",
-        "max-length": 25
+        "max-length": 25,
+        "tooltip-format": "<span font='monospace'>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "format": {
+                "months": "<span color='#ff6699'><b>{}</b></span>",
+                "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                "weekdays": "<span color='#7CD37C'><b>{}</b></span>",
+                "today": "<span color='#ffcc66'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_down",
+            "on-scroll-down": "shift_up"
+        }
     },
     "hyprland/workspaces": {
         "format": "{name}",
