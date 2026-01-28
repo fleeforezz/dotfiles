@@ -117,7 +117,7 @@
         ]
     },
     "custom/spotify": {
-        "exec": "playerctl -p spotify metadata --format '{{ status }} {{ artist }} - {{ title }}'",
+        "exec": "playerctl -p spotify metadata --format '{{ status }} {{ title }} - {{ artist }}'",
         "interval": 1,
         "return-type": "string",
         "max-length": 20,
