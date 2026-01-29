@@ -115,5 +115,11 @@ alias uprd='sudo apt upgrade'
 alias tx='tmux'
 alias cls='clear'
 
+# Oh My Posh
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/test.omp.json)"
+
+# Pokemon ColorScript
+pokemon-colorscripts -rn cleffa,charmeleon,taillow
+
+
 
