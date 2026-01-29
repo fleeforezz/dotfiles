@@ -2,29 +2,8 @@
     "position": "top",
     "layer": "top",
     "height": 34,
-    "fixed-center": false,
-    "margin-top": 0,
-    "module-left": [],
-    // "modules-left": [
-    //     "custom/appmenu",
-    //     "cpu",
-    //     "disk",
-    //     "tray"
-    // ],
-    // "modules-center": [
-    //     "custom/appmenu",
-    //     "cpu",
-    //     "disk",
-    //     "tray",
-    //     "clock",
-    //     "hyprland/workspaces",
-    //     "pulseaudio",
-    //     "bluetooth",
-    //     "custom/networkmanager",
-    //     "battery",
-    //     "custom/notification",
-    //     "custom/exit"
-    // ],
+    "fixed-center": true,
+    "margin-top": 10,
     "modules-center": [
         "clock",
         "tray",
@@ -36,29 +15,6 @@
         "battery",
         "custom/notification"
     ],
-    "module-right": [],
-    // "modules-right": [
-    //     "pulseaudio",
-    //     "bluetooth",
-    //     "custom/networkmanager",
-    //     "battery",
-    //     "custom/notification",
-    //     "custom/exit"
-    // ],
-    // "cpu": {
-    //     "interval": 5,
-    //     "format": " {}%",
-    //     "max-length": 10
-    // },
-    // "disk": {
-    //     "interval": 30,
-    //     "format": "<span size='10pt'></span> {percentage_free} %",
-    //     "path": "/"
-    // },
-    // "custom/appmenu": {
-    //     "format": "<span size='10pt'>󰊠</span>",
-    //     "on-click": "~/.config/rofi/launchers/type-6/launcher.sh || pkill rofi"
-    // },
     "clock": {
         "interval": 60,
         "format": "<span size='10pt'></span> {:%H:%M}",

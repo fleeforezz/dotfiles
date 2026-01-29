@@ -4,22 +4,30 @@
     border: none;
     border-radius: 0px;
 
-    font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-family: "Rubik", "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
     font-weight: bold;    
+
+    /* font-size: 16px; */
 
     min-height: 0;
     padding: 0;
     margin: 0;
 }
 
-window#waybar {
-    background: transparent;
-    border-radius: 18px;
+.modules-center {
+    background: @bg0;
+    padding: 6px 12px;
+    border-radius: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-#waybar > box {
-    padding: 4px 9px;
+window#waybar {
+    background: transparent;
 }
+
+/* #waybar > box {
+    padding: 4px 9px;
+} */
 
 tooltip {
     background: @bg0;
@@ -91,17 +99,21 @@ tooltip label {
 #custom-exit,
 #custom-notification {
     background-color: @bg0;
-    padding: 0 10px 0 10px;
-    margin: 0 0px 0 12px;
-    border-radius: 50px;
+    padding: 0 8px;
+    margin: 0 5px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
 }
 
 #custom-appmenu {
     color: @blue;
+    margin: 0;
 }
 
 #custom-spotify {
     color: @green;
+    margin: 0 0 0 10px;
 }
 
 #bluetooth {
@@ -110,6 +122,7 @@ tooltip label {
 
 #clock {
     color: @blue;
+    margin: 0;
 }
 
 #custom-notification {
@@ -136,3 +149,4 @@ tooltip label {
 #battery {
     color: @green;
 }
+
