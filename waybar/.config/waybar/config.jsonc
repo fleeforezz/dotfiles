@@ -14,7 +14,7 @@
     ],
     "clock": {
         "interval": 60,
-        "format": "<span size='10pt'></span> {:%H:%M}",
+        "format": "<span size='10pt'></span> {:%H:%M}",
         "max-length": 25,
         "tooltip-format": "<span font='monospace'>{calendar}</span>",
         "calendar": {
