@@ -5,12 +5,11 @@
     "fixed-center": true,
     "margin-top": 10,
     "modules-center": [
-        "clock",
         "tray",
+        "clock",
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
-        "bluetooth",
         "custom/networkmanager",
         "battery",
         "custom/notification"
