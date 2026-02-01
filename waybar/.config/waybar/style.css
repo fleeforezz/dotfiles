@@ -16,7 +16,7 @@
 
 .modules-center {
     background: @bg0;
-    padding: 1px 2px;
+    padding: 1px 10px;
     border-radius: 38px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -25,9 +25,6 @@ window#waybar {
     background: transparent;
 }
 
-/* #waybar > box {
-    padding: 4px 9px;
-} */
 
 tooltip {
     background: @bg0;

@@ -5,7 +5,6 @@
     "fixed-center": true,
     "margin-top": 10,
     "modules-center": [
-        "tray",
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
