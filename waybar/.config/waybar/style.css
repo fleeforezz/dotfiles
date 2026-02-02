@@ -118,7 +118,7 @@ tooltip label {
 }
 
 #clock {
-    color: @fg;
+    color: @cyan;
     margin: 0;
 }
 

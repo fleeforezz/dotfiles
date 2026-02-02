@@ -43,7 +43,7 @@
         },
         "persistent-workspaces": {
             "*": 5, // 5 workspaces by default on every monitor
-            "HDMI-A-1": 3 // but only three on HDMI-A-1
+            "HDMI-A-1": 5 // but only three on HDMI-A-1
         }
     },
     "pulseaudio": {
@@ -98,13 +98,25 @@
         "tooltip": false
     },
     "battery": {
-        "interval": 60,
+        "interval": 3,
         "states": {
             "warning": 30,
             "critical": 15
         },
+
+        // Discharging
         "format": "<span size='10pt'>{icon}</span> {capacity}%",
         "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+
+        // Charging
+        "format-charging": "<span size='10pt'>{icon}</span> {capacity}% ",
+        "format-icons-charging": [
             "",
             "",
             "",
