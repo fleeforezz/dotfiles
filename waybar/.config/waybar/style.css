@@ -1,4 +1,5 @@
-@import 'colors/rxyhmn.css';
+/* @import 'colors/rxyhmn.css'; */
+@import 'colors/cherry.css';
 
 * {
     border: none;
@@ -57,9 +58,9 @@ tooltip label {
 #workspaces button.active {
     background: linear-gradient(
         135deg,
-        @blue,
-        @purple,
-        @red
+        @fg0,
+        @fg1,
+        @fg2
     );
     color: @bg0;
     min-width: 35px;
@@ -76,7 +77,7 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+    background-color: @fg0;
     color: @bg0;
     border-radius: 16px;
     min-width: 25px;
@@ -109,7 +110,7 @@ tooltip label {
 }
 
 #custom-spotify {
-    color: @green;
+    color: @yellow;
     margin: 0 0 0 10px;
 }
 
@@ -118,7 +119,7 @@ tooltip label {
 }
 
 #clock {
-    color: @cyan;
+    color: @fg0;
     margin: 0;
 }
 
@@ -135,7 +136,7 @@ tooltip label {
 }
 
 #network {
-    color: @purple;
+    color: @yellow;
 }
 
 #custom-exit {

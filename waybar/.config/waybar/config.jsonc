@@ -92,7 +92,7 @@
         "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
     },
     "custom/networkmanager": {
-        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#f38ba8\" --enabled-color \"#c678dd\" | cat",
+        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#af6469\" --enabled-color \"#ca888a\" | cat",
         "return-type": "raw",
         "format": "{}  ",
         "interval": 3,
