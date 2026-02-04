@@ -69,11 +69,10 @@ tooltip label {
 }
 
 #workspaces button:hover {
-    background-color: @purple;
-    color: @bg0;
+    background-color: @yellow;
+    color: @fg1;
     border-radius: 16px;
     min-width: 25px;
-    background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
@@ -102,6 +101,10 @@ tooltip label {
     border-radius: 38;
     border: none;
     box-shadow: none;
+}
+
+#tray {
+    color: @yellow;
 }
 
 #custom-appmenu {
