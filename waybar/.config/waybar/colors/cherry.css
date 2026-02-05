@@ -1,21 +1,17 @@
-@define-color bg0        #1B2125;  /* main background */
-@define-color bg1        #3c4043;  /* panels / cards */
-@define-color bg2        #804247;  /* elevated surfaces */
-
-@define-color fg0        #BBCABC;  /* primary text */
-@define-color fg1        #af6469;  /* secondary text */
-@define-color fg2        #7c7b80;  /* subtle text */
-
-@define-color red        #804247;
-@define-color orange     #aa4b51;
-@define-color yellow     #ca888a;
-@define-color green      #7a4348;
-@define-color cyan       #ca888a;
-@define-color blue       #af6469;
-@define-color purple     #aa4b51;
-
-@define-color accent     #aa4b51;  /* rxyhnm signature accent */
-
-@define-color border     #1a2225;
-@define-color highlight  #804247;
-@define-color muted      #7c7b80;
+@define-color bg0        #1a1f23;  /* main background - deep charcoal */
+@define-color bg1        #252b30;  /* panels / cards - slightly lighter */
+@define-color bg2        #2f3539;  /* elevated surfaces */
+@define-color fg0        #e8e6e3;  /* primary text - soft white */
+@define-color fg1        #c4b5b0;  /* secondary text - warm gray */
+@define-color fg2        #8a8885;  /* subtle text - muted gray */
+@define-color red        #d4949a;  /* soft dusty rose */
+@define-color orange     #daa29a;  /* peachy pink */
+@define-color yellow     #e5c4b8;  /* warm cream */
+@define-color green      #9da39e;  /* sage green (from blurred bg) */
+@define-color cyan       #b8c4c9;  /* soft blue-gray */
+@define-color blue       #a8b4ba;  /* muted steel blue */
+@define-color purple     #c4a4ab;  /* mauve */
+@define-color accent     #d4949a;  /* cherry blossom pink */
+@define-color border     #16191c;  /* very dark border */
+@define-color highlight  #b87d85;  /* deeper rose for highlights */
+@define-color muted      #6e6c6a;  /* desaturated gray */

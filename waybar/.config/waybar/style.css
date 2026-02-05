@@ -1,52 +1,41 @@
 /* @import 'colors/rxyhmn.css'; */
 @import 'colors/cherry.css';
-
 * {
     border: none;
     border-radius: 0px;
-
     font-family: "Rubik", "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
     font-weight: bold;    
-
     /* font-size: 14px; */
-
     min-height: 0;
     padding: 0;
     margin: 0;
 }
-
 .modules-center {
     background: @bg0;
     padding: 1px 10px;
     border-radius: 38px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-
 window#waybar {
     background: transparent;
 }
-
-
 tooltip {
     background: @bg0;
-    border: 1px solid @bg3;
+    border: 1px solid @bg2;
     border-radius: 12px;
 }
-
 tooltip label {
-    color: @fg;
+    color: @fg0;
     padding: 6px;
 }
-
 #workspaces {
     background-color: @bg0;
     padding: 5px 3px;
     margin: 0 0 0 1px;
     border-radius: 18px;
     border: 1px solid @bg0;
-    color: @fg;
+    color: @fg0;
 }
-
 #workspaces button {
     padding: 0px 6px;
     margin: 0px 3px;
@@ -54,7 +43,6 @@ tooltip label {
     color: @fg2;
     transition: all 0.3s ease-in-out;
 }
-
 #workspaces button.active {
     background: linear-gradient(
         135deg,
@@ -67,14 +55,12 @@ tooltip label {
     transition: all 0.3s ease-in-out;
     font-size: 13px;
 }
-
 #workspaces button:hover {
     background-color: @yellow;
     color: @fg1;
     border-radius: 16px;
     min-width: 25px;
 }
-
 #workspaces button.urgent {
     background-color: @fg0;
     color: @bg0;
@@ -83,7 +69,6 @@ tooltip label {
     background-size: 400% 400%;
     transition: all 0.3s ease-in-out;
 }
-
 #tray,
 #battery,
 #custom-spotify,
@@ -102,52 +87,40 @@ tooltip label {
     border: none;
     box-shadow: none;
 }
-
 #tray {
     color: @yellow;
 }
-
 #custom-appmenu {
     color: @blue;
     margin: 0;
 }
-
 #custom-spotify {
     color: @yellow;
     margin: 0 0 0 10px;
 }
-
 #bluetooth {
     color: @blue;
 }
-
 #clock {
     color: @fg0;
     margin: 0;
 }
-
 #custom-notification {
     color: @blue;
 }
-
 #pulseaudio {
     color: @yellow;
 }
-
 #cpu {
     color: @green;
 }
-
 #network {
     color: @yellow;
 }
-
 #custom-exit {
     color: @red;
     margin: 0 0 0 0px;
 }
-
 #battery {
     color: @green;
 }
-

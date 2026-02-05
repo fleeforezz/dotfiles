@@ -1,0 +1,21 @@
+@define-color bg0        #1B2125;  /* main background */
+@define-color bg1        #3c4043;  /* panels / cards */
+@define-color bg2        #804247;  /* elevated surfaces */
+
+@define-color fg0        #BBCABC;  /* primary text */
+@define-color fg1        #af6469;  /* secondary text */
+@define-color fg2        #7c7b80;  /* subtle text */
+
+@define-color red        #804247;
+@define-color orange     #aa4b51;
+@define-color yellow     #ca888a;
+@define-color green      #7a4348;
+@define-color cyan       #ca888a;
+@define-color blue       #af6469;
+@define-color purple     #aa4b51;
+
+@define-color accent     #aa4b51;  /* rxyhnm signature accent */
+
+@define-color border     #1a2225;
+@define-color highlight  #804247;
+@define-color muted      #7c7b80;
