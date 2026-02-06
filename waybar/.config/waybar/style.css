@@ -1,41 +1,49 @@
-/* @import 'colors/rxyhmn.css'; */
-@import 'colors/cherry.css';
+@import 'colors/rxyhmn.css';
+
 * {
     border: none;
     border-radius: 0px;
+
     font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
     font-weight: bold;    
-    font-size: 16px;
+
+    font-size: 14px;
+
     min-height: 0;
     padding: 0;
     margin: 0;
 }
+
 .modules-center {
-    background: @bg0;
-    padding: 1px 10px;
-    border-radius: 38px;
+    background: transparent;
+    /* padding: 1px 10px; */
+    /* border-radius: 38px; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 window#waybar {
     background: transparent;
 }
+
+
 tooltip {
     background: @bg0;
-    border: 1px solid @bg2;
+    border: 1px solid @fg1;
     border-radius: 12px;
 }
+
 tooltip label {
     color: @fg0;
     padding: 6px;
 }
+
 #workspaces {
     background-color: @bg0;
     padding: 5px 3px;
-    margin: 0 0 0 1px;
-    border-radius: 18px;
     border: 1px solid @bg0;
-    color: @fg0;
+    color: @fg;
 }
+
 #workspaces button {
     padding: 0px 6px;
     margin: 0px 3px;
@@ -43,32 +51,37 @@ tooltip label {
     color: @fg2;
     transition: all 0.3s ease-in-out;
 }
+
 #workspaces button.active {
     background: linear-gradient(
         135deg,
-        @fg0,
-        @fg1,
-        @fg2
+        @blue,
+        @purple,
+        @red
     );
     color: @bg0;
     min-width: 35px;
     transition: all 0.3s ease-in-out;
     font-size: 13px;
 }
+
 #workspaces button:hover {
-    background-color: @yellow;
-    color: @fg1;
+    background-color: @purple;
+    color: @bg0;
     border-radius: 16px;
     min-width: 25px;
+    background-size: 400% 400%;
 }
+
 #workspaces button.urgent {
-    background-color: @fg0;
+    background-color: @red;
     color: @bg0;
     border-radius: 16px;
     min-width: 25px;
     background-size: 400% 400%;
     transition: all 0.3s ease-in-out;
 }
+
 #tray,
 #battery,
 #custom-spotify,
@@ -82,45 +95,51 @@ tooltip label {
 #custom-notification {
     background-color: @bg0;
     padding: 0 5px;
-    margin: 0 5px;
-    border-radius: 38;
     border: none;
     box-shadow: none;
 }
+
 #tray {
-    color: @yellow;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 38px;
 }
-#custom-appmenu {
-    color: @blue;
-    margin: 0;
-}
+
 #custom-spotify {
-    color: @yellow;
-    margin: 0 0 0 10px;
+    color: @green;
+    /* margin: 0 0 0 10px; */
 }
+
 #bluetooth {
     color: @blue;
 }
+
 #clock {
-    color: @fg0;
-    margin: 0;
+    color: @cyan;
+    border-radius: 38px 0px 0px 38px;
 }
+
 #custom-notification {
     color: @blue;
 }
+
 #pulseaudio {
     color: @yellow;
 }
+
 #cpu {
     color: @green;
 }
+
 #network {
-    color: @yellow;
+    color: @purple;
 }
+
 #custom-exit {
     color: @red;
-    margin: 0 0 0 0px;
 }
+
 #battery {
     color: @green;
+    border-radius: 0px 38px 38px 0px;
 }
