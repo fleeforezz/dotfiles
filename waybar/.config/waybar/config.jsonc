@@ -5,14 +5,25 @@
     "fixed-center": true,
     "margin-top": 10,
     "modules-center": [
-        "tray",
+        "cpu",
+        "memory",
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
         "battery",
-        "custom/networkmanager"
+        "custom/networkmanager",
+        "tray"
     ],
+    "cpu": {
+        "interval": 1,
+        "format": "{}% ",
+        "max-length": 10
+    },
+    "memory": {
+        "interval": 1,
+        "format": "{used:0.1f}G/{total:0.1f}G"
+    },
     "clock": {
         "interval": 60,
         "format": "<span size='10pt'></span> {:%H:%M}",

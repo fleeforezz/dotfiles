@@ -82,6 +82,7 @@ tooltip label {
     transition: all 0.3s ease-in-out;
 }
 
+#cpu,
 #tray,
 #battery,
 #custom-spotify,
@@ -89,9 +90,9 @@ tooltip label {
 #bluetooth,
 #custom-networkmanager,
 #clock,
-#cpu,
 #custom-appmenu,
 #custom-exit,
+#memory,
 #custom-notification {
     background-color: @bg0;
     padding: 0 5px;
@@ -100,14 +101,13 @@ tooltip label {
 }
 
 #tray {
-    margin-right: 10px;
+    margin-left: 10px;
     padding: 5px 10px;
     border-radius: 38px;
 }
 
 #custom-spotify {
     color: @green;
-    /* margin: 0 0 0 10px; */
 }
 
 #bluetooth {
@@ -129,6 +129,15 @@ tooltip label {
 
 #cpu {
     color: @green;
+    padding: 5px 10px;
+    border-radius: 38px 0px 0px 38px;
+}
+
+#memory {
+    color: @green;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 0px 38px 38px 0px;
 }
 
 #network {
