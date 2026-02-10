@@ -10,8 +10,8 @@
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
-        "custom/networkmanager",
-        "battery"
+        "battery",
+        "custom/networkmanager"
     ],
     "clock": {
         "interval": 60,

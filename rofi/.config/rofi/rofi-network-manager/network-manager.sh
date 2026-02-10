@@ -35,7 +35,7 @@ get_status() {
     if [[ -n "$eth_dev" ]]; then
         status_icon="󰈀"        # Ethernet icon
         status_color=$ENABLED_COLOR
-        text="Wired ($eth_dev)"
+        text="Wired($eth_dev) "
 
     elif [[ -n "$wifi_dev" ]]; then
         local wifi_info signal security ssid signal_icon signal_level

@@ -141,5 +141,8 @@ tooltip label {
 
 #battery {
     color: @green;
+}
+
+#custom-networkmanager {
     border-radius: 0px 38px 38px 0px;
 }
