@@ -74,9 +74,9 @@
             "5": ""
         },
         "persistent-workspaces": {
-            "HDMI-A-1": 5, // but only five on HDMI-A-1
-            "DP-1": 5,
-            "DP-2": 5,
+            "HDMI-A-1": [1, 2, 3, 4, 5],
+            "DP-1": [6, 7, 8, 9, 10],
+            "DP-2": [11, 12, 13, 14, 15],
             "*": 5 // 5 workspaces by default on every monitor
         }
     },
