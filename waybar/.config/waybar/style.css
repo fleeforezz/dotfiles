@@ -83,6 +83,7 @@ tooltip label {
 }
 
 #cpu,
+#disk,
 #tray,
 #battery,
 #custom-spotify,
@@ -134,6 +135,12 @@ tooltip label {
 }
 
 #memory {
+    color: @green;
+    padding: 5px 10px;
+    /* border-radius: 0px 38px 38px 0px; */
+}
+
+#disk {
     color: @green;
     margin-right: 10px;
     padding: 5px 10px;

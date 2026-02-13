@@ -7,6 +7,7 @@
     "modules-center": [
         "cpu",
         "memory",
+        "disk",
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
@@ -15,6 +16,11 @@
         "custom/networkmanager",
         "tray"
     ],
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}% ",
+        "path": "/"
+    },
     "cpu": {
         "interval": 10,
         "format": " {usage}%",
