@@ -8,6 +8,7 @@
 @define-color fg1        #bac2de;  /* secondary text */
 @define-color fg2        #a6adc8;  /* subtle text */
 
+@define-color white      #ffffff;
 @define-color red        #f38ba8;
 @define-color orange     #fab387;
 @define-color yellow     #f9e2af;

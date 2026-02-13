@@ -18,7 +18,7 @@
     background: transparent;
     /* padding: 1px 10px; */
     /* border-radius: 38px; */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
 }
 
 window#waybar {
@@ -115,7 +115,7 @@ tooltip label {
 }
 
 #clock {
-    color: @cyan;
+    color: @white;
     border-radius: 38px 0px 0px 38px;
 }
 
