@@ -1,13 +1,18 @@
 {
     "position": "top",
     "layer": "top",
-    "height": 34,
     "fixed-center": true,
-    "margin-top": 10,
-    "modules-center": [
+    "height": 28,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": [
         "cpu",
         "memory",
-        "disk",
+        "disk"
+    ],
+    "modules-center": [
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
@@ -16,11 +21,11 @@
         "custom/networkmanager",
         "tray"
     ],
-    "disk": {
-        "interval": 30,
-        "format": " {percentage_used}% ",
-        "path": "/"
-    },
+    "modules-right": [
+        "custom/notification",
+        "custom/exit"
+    ],
+
     "cpu": {
         "interval": 10,
         "format": " {usage}%",
@@ -46,6 +51,12 @@
         //"tooltip-format": "\udb83\udf86 {percentage}%\n\ue266 {used:0.1f}GB/{total:0.1f}GB",
         "tooltip-format": "\udb83\udf86 Memory usage: {percentage}%\n\ue266 Used: {used:0.2f}GB / {total:0.2f}GB\n\uf85a Available: {avail:0.2f}GB\n\uf233 Swap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
     },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}% ",
+        "path": "/"
+    },
+
     "clock": {
         "format": " {:%H:%M}",
         "rotate": 0,
@@ -69,6 +80,16 @@
         "on-scroll-up": "shift_up",
         "on-scroll-down": "shift_down"
         }
+    },
+    "custom/spotify": {
+        "exec": "~/.config/waybar/scripts/spotify.sh",
+        "interval": 1,
+        "return-type": "string",
+        "max-length": 30,
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify next",
+        "on-scroll-down": "playerctl -p spotify previous",
+        "format": "{}"
     },
     "hyprland/workspaces": {
         "format": "{name}",
@@ -109,34 +130,6 @@
             "Easy Effects Sink"
         ]
     },
-    "custom/spotify": {
-        "exec": "~/.config/waybar/scripts/spotify.sh",
-        "interval": 1,
-        "return-type": "string",
-        "max-length": 30,
-        "on-click": "playerctl -p spotify play-pause",
-        "on-scroll-up": "playerctl -p spotify next",
-        "on-scroll-down": "playerctl -p spotify previous",
-        "format": "{}"
-    },
-    "bluetooth": {
-        "format": " {status}",
-        "format-disabled": "",
-        "format-connected": " {num_connections} connected",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
-    },
-    "custom/networkmanager": {
-        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#7c7b80\" --enabled-color \"#cba6f7\" | cat",
-        "return-type": "raw",
-        "format": "{}",
-        "interval": 3,
-        "rotate": 0,
-        "on-click": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh",
-        "tooltip": true
-    },
     "battery": {
         "interval": 3,
         "states": {
@@ -165,11 +158,25 @@
         ],
         "max-length": 25
     },
-    "custom/exit": {
-        "format": "<span size='10pt'></span>",
-        "on-click": "~/.config/rofi/powermenu/type-5/powermenu.sh || pkill rofi",
-        "tooltip": false
+    "custom/networkmanager": {
+        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#7c7b80\" --enabled-color \"#cba6f7\" | cat",
+        "return-type": "raw",
+        "format": "{}",
+        "interval": 3,
+        "rotate": 0,
+        "on-click": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh",
+        "tooltip": true
     },
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": "",
+        "format-connected": " {num_connections} connected",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
+    },
+
     "custom/notification": {
         "tooltip": true,
         "format": "<span size='10pt'>{icon}</span>",
@@ -189,5 +196,10 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-    }
+    },
+    "custom/exit": {
+        "format": "<span size='10pt'></span>",
+        "on-click": "~/.config/rofi/powermenu/powermenu.sh || pkill rofi",
+        "tooltip": false
+    },
 }
