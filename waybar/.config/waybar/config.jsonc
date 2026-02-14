@@ -8,22 +8,24 @@
     "margin-right": 8,
 
     "modules-left": [
-        "cpu",
-        "memory",
-        "disk"
+        
     ],
     "modules-center": [
+        "cpu",
+        "memory",
+        "disk",
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
         "battery",
         "custom/networkmanager",
-        "tray"
-    ],
-    "modules-right": [
+        "tray",
         "custom/notification",
         "custom/exit"
+    ],
+    "modules-right": [
+        
     ],
 
     "cpu": {
