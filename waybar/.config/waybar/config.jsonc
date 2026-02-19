@@ -20,9 +20,9 @@
         "pulseaudio",
         "battery",
         "custom/networkmanager",
-        "tray",
-        "custom/notification",
-        "custom/exit"
+        "tray"
+        // "custom/notification",
+        // "custom/exit"
     ],
     "modules-right": [
         

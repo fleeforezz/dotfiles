@@ -108,7 +108,6 @@ tooltip label {
 #memory {
     color: @green;
     padding: 5px 10px;
-    /* border-radius: 0px 38px 38px 0px; */
 }
 #disk {
     color: @green;
@@ -143,7 +142,7 @@ tooltip label {
 #tray {
     margin-left: 10px;
     padding: 5px 10px;
-    border-radius: 38px 0px 0px 38px;
+    border-radius: 38px;
 }
 #custom-notification {
     color: @blue;
