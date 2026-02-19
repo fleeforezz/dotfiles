@@ -54,13 +54,13 @@ get_status() {
         text="$ssid"
 
     else
-        status_icon=" "
+        status_icon=""
         status_color=$DISABLED_COLOR
-        text="Disconnected"
+        text="Disconnected "
     fi
 
     if [[ "$SESSION_TYPE" == "wayland" ]]; then
-        echo "<span color=\"$status_color\">$status_icon $text</span>"
+        echo "<span color=\"$status_color\">$status_icon $text </span>"
     else
         echo "%{F$status_color}$status_icon $text%{F-}"
     fi
