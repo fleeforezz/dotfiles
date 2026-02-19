@@ -83,11 +83,11 @@
                 },
                 {
                     "label": " ",
-                    "command": "nm-connection-editor"
+                    "command": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh"
                 },
                 {
                     "label": "󰂯",
-                    "command": "blueman-manager"
+                    "command": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
                 },
                 {
                     "label": "󰏘",

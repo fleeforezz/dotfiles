@@ -11,18 +11,12 @@
         
     ],
     "modules-center": [
-        "cpu",
-        "memory",
-        "disk",
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
         "battery",
-        "custom/networkmanager",
-        "tray"
-        // "custom/notification",
-        // "custom/exit"
+        "custom/networkmanager"
     ],
     "modules-right": [
         
