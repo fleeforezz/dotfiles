@@ -11,15 +11,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-* {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #10191C;
-    background-alt:              #1D2629;
-    foreground:                  #556488;
-    selected:                    #242D30;
-    active:                      #89b4fa;
-    urgent:                      #f38ba8;
-}
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -29,8 +22,22 @@ configuration {
     alternate-background:        var(background-alt);
     normal-background:           var(background);
     normal-foreground:           var(foreground);
-    selected-normal-background:  var(background-alt);
-    selected-normal-foreground:  var(foreground);
+    urgent-background:           var(urgent);
+    urgent-foreground:           var(background);
+    active-background:           var(active);
+    active-foreground:           var(background);
+    selected-normal-background:  var(selected);
+    selected-normal-foreground:  var(background);
+    selected-urgent-background:  var(active);
+    selected-urgent-foreground:  var(background);
+    selected-active-background:  var(urgent);
+    selected-active-foreground:  var(background);
+    alternate-normal-background: var(background);
+    alternate-normal-foreground: var(foreground);
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
 }
 
 /*****----- Main Window -----*****/

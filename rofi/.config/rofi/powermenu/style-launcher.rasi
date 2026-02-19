@@ -11,15 +11,33 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
+@import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
+
 * {
-    font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #10191C;
-    background-alt:              #1D2629;
-    foreground:                  #556488;
-    selected:                    #556488;
-    active:                      #7CD37C;
-    urgent:                      #E06C75;
-    border-colour:               #242D30;
+    border-colour:               var(selected);
+    handle-colour:               var(foreground);
+    background-colour:           var(background);
+    foreground-colour:           var(foreground);
+    alternate-background:        var(background-alt);
+    normal-background:           var(background);
+    normal-foreground:           var(foreground);
+    urgent-background:           var(urgent);
+    urgent-foreground:           var(background);
+    active-background:           var(active);
+    active-foreground:           var(background);
+    selected-normal-background:  var(selected);
+    selected-normal-foreground:  var(background);
+    selected-urgent-background:  var(active);
+    selected-urgent-foreground:  var(background);
+    selected-active-background:  var(urgent);
+    selected-active-foreground:  var(background);
+    alternate-normal-background: var(background);
+    alternate-normal-foreground: var(foreground);
+    alternate-urgent-background: var(urgent);
+    alternate-urgent-foreground: var(background);
+    alternate-active-background: var(active);
+    alternate-active-foreground: var(background);
 }
 
 /*****----- Main Window -----*****/
@@ -40,7 +58,7 @@ window {
     border-radius:               20px;
     border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            #10191C;
 }
 
 /*****----- Main Box -----*****/
@@ -64,9 +82,9 @@ inputbar {
     padding:                     15px;
     border:                      2px solid;
     border-radius:               10px;
-    border-color:                @border-colour;
+    border-color:                #242D30;
     background-color:            transparent;
-    text-color:                  @foreground;
+    text-color:                  #556488;
     children:                    [ "prompt" ];
 }
 
@@ -119,8 +137,8 @@ element {
 }
 
 element selected.normal {
-    background-color:            @background-alt;
-    text-color:                  @selected;
+    background-color:            #1D2629;
+    text-color:                  #556488;
 }
 
 element-text {
