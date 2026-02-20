@@ -30,7 +30,7 @@ confirm_cmd() {
 		-mesg 'Are you Sure?' \
 		-theme-str 'window {width: 300px; height: 250px;}' \
 		-theme-str 'listview {columns: 1; lines: 1;}' \
-		-theme-str 'element-text {horizontal-align: 0.5;}' \
+		-theme-str 'element-text {horizontal-align: 0.47;}' \
 		-theme ${dir}/${theme}.rasi
 }
 
