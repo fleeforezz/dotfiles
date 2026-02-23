@@ -18,6 +18,7 @@
         "custom/spotify",
         "hyprland/workspaces",
         "pulseaudio",
+        "bluetooth",
         "battery",
         "custom/networkmanager",
         "tray"
