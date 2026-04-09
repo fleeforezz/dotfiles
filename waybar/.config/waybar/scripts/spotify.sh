@@ -14,5 +14,5 @@ metadata=$(playerctl -p spotify metadata --format '{{ title }} - {{ artist }}' 2
 if [ -n "$metadata" ]; then
     echo "$icon $metadata"
 else
-    echo ""
+    echo "Nothing playing"
 fi

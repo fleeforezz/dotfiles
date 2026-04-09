@@ -14,9 +14,8 @@
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
-        "pulseaudio",
-        "battery",
-        "custom/networkmanager"
+        "custom/networkmanager",
+        "battery"
     ],
     "modules-right": [
         
@@ -100,6 +99,7 @@
             "HDMI-A-1": [1, 2, 3, 4, 5],
             "DP-1": [6, 7, 8, 9, 10],
             "DP-2": [11, 12, 13, 14, 15],
+            "eDPeDP-1": [1, 2, 3, 4, 5],
             "*": 5 // 5 workspaces by default on every monitor
         }
     },
@@ -144,7 +144,7 @@
         ],
 
         // Charging
-        "format-charging": "<span size='10pt'>{icon}</span> {capacity}% ",
+        "format-charging": "<span size='10pt'>{icon}</span> {capacity}%  ",
         "format-icons-charging": [
             "",
             "",
