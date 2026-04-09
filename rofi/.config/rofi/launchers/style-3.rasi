@@ -25,24 +25,24 @@ configuration {
 
 * {
     border-colour:               var(selected);
-    handle-colour:               var(foreground);
+    handle-colour:               var(foreground-0);
     background-colour:           var(background);
-    foreground-colour:           var(foreground);
+    foreground-colour:           var(foreground-0);
     alternate-background:        var(background-alt);
     normal-background:           var(background);
-    normal-foreground:           var(foreground);
+    normal-foreground:           var(foreground-0);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
     selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
+    selected-normal-foreground:  var(foreground-1);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
-    selected-active-foreground:  var(background);
+    selected-active-foreground:  var(foreground-1);
     alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
+    alternate-normal-foreground: var(foreground-1);
     alternate-urgent-background: var(urgent);
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
@@ -71,7 +71,7 @@ window {
     cursor:                      "default";
     /* Backgroud Colors */
     // background-color:            @background-colour;
-    background-color:            #10191C;
+    background-color:            @normal-background;
     /* Translucent Background */
     // background-color:            rgba(11, 14, 20, 0.21);
     /* Backgroud Image */
@@ -79,7 +79,7 @@ window {
     /* Simple Linear Gradient */
     //background-image:          linear-gradient(red, orange, pink, purple);
     /* Directional Linear Gradient */
-    //background-image:          linear-gradient(to bottom, pink, yellow, magenta);
+    //background-image:          linear-gradiefnt(to bottom, pink, yellow, magenta);
     /* Angle Linear Gradient */
     //background-image:          linear-gradient(45, cyan, purple, indigo);
 }
@@ -94,7 +94,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -107,7 +107,7 @@ inputbar {
     border-radius:               10px;
     border-color:                #242D30;
     background-color:            transparent;
-    text-color:                  #556488;
+    text-color:                  @alternate-normal-foreground;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -128,32 +128,8 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "search...";
+    placeholder:                 "Finding something...";
     placeholder-color:           inherit;
-}
-num-filtered-rows {
-    enabled:                     true;
-    expand:                      false;
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-textbox-num-sep {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "/";
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-num-rows {
-    enabled:                     true;
-    expand:                      false;
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-case-indicator {
-    enabled:                     true;
-    background-color:            inherit;
-    text-color:                  inherit;
 }
 
 /*****----- Listview -----*****/
@@ -212,8 +188,8 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            #1D2629;
-    text-color:                  #556488;
+    background-color:            var(selected-normal-background);
+    text-color:                  var(selected-normal-foreground);
 }
 element selected.urgent {
     background-color:            transparent;
@@ -225,7 +201,7 @@ element selected.active {
 }
 element alternate.normal {
     background-color:            transparent;
-    text-color:                  var(alternate-normal-foreground);
+    // text-color:                  var(alternate-normal-foreground);
 }
 element alternate.urgent {
     background-color:            transparent;
@@ -233,7 +209,7 @@ element alternate.urgent {
 }
 element alternate.active {
     background-color:            transparent;
-    text-color:                  var(alternate-active-foreground);
+    text-color:                  var(selected-active-foreground);
 }
 element-icon {
     background-color:            transparent;
@@ -248,64 +224,4 @@ element-text {
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
-}
-
-/*****----- Mode Switcher -----*****/
-mode-switcher{
-    enabled:                     false;
-    spacing:                     10px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
-}
-button {
-    padding:                     8px;
-    border:                      0px solid;
-    border-radius:               10px;
-    border-color:                @border-colour;
-    background-color:            @alternate-background;
-    text-color:                  inherit;
-    cursor:                      pointer;
-}
-button selected {
-    background-color:            var(normal-foreground);
-    text-color:                  var(normal-background);
-}
-
-/*****----- Message -----*****/
-message {
-    enabled:                     true;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
-    border-color:                @border-colour;
-    background-color:            transparent;
-    text-color:                  @foreground-colour;
-}
-textbox {
-    padding:                     8px;
-    border:                      0px solid;
-    border-radius:               4px;
-    border-color:                @border-colour;
-    background-color:            @alternate-background;
-    text-color:                  @foreground-colour;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
-    highlight:                   none;
-    placeholder-color:           @foreground-colour;
-    blink:                       true;
-    markup:                      true;
-}
-error-message {
-    padding:                     10px;
-    border:                      0px solid;
-    border-radius:               4px;
-    border-color:                @border-colour;
-    background-color:            @background-colour;
-    text-color:                  @foreground-colour;
 }
