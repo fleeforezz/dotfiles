@@ -129,7 +129,7 @@ tooltip label {
     margin: 0px 5px 0px 5px;
 }
 #pulseaudio {
-    color: @yellow;
+    color: @orange;
 }
 #network {
     color: @purple;
@@ -150,7 +150,7 @@ tooltip label {
     border-radius: 38px;
 }
 #custom-notification {
-    color: @blue;
+    color: @white;
     padding: 5px 10px;
 }
 #custom-exit {

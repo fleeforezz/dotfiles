@@ -22,11 +22,33 @@
   
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
+/* Sliders (volume / brightness) */
+scale {
+  min-height: 14px;
+}
+
+scale trough {
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  min-height: 10px;
+}
+
+scale highlight {
+  background: #7bd88f; /* green */
+  border-radius: 999px;
+}
+
+scale slider {
+  background: transparent;
+  min-width: 0;
+  min-height: 0;
+}
+
 .control-center {
-  background: alpha(@background, .55);
-  border-radius: 14px;
-  border: 1px solid @selected;
-  /* box-shadow: 0 0 10px 0 rgba(0,0,0,.6); */
+  background: rgba(15, 25, 30, 0.75);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05); /* softer */
+   backdrop-filter: blur(20px); /* 🔥 glass effect */
   margin: 18px;
   padding: 12px;
 }
@@ -182,22 +204,25 @@ progressbar {
 
   /* Buttons menu */
 .widget-buttons-grid {
-  font-size: x-large;
+  /* font-size: x-large;
   padding: 6px 2px;
   margin: 6px;
-  border-radius: 12px;
-  background: @background-alt;
+  border-radius: 12px; */
+  background: transparent;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-  margin: 4px 10px;
-  padding: 6px 12px;
-  background: transparent;
-  border-radius: 8px;
+  background: rgba(120, 200, 150, 0.15);
+  border-radius: 14px;
+  padding: 14px;
+  margin: 6px;
+  color: #a6e3a1;
+  cursor: pointer;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background: @hover;
+  background: rgba(120, 200, 150, 0.3);
+  cursor: pointer;
 }
 
 
@@ -206,7 +231,7 @@ progressbar {
     background: @background-alt;
     border-radius: 16px;
     color: @text;
-    margin:  20px 6px;
+    margin: 12px 6px;
 }
 
   /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
@@ -237,6 +262,7 @@ progressbar {
 .widget-mpris-title {
     font-weight: 700;
     font-size: 1rem;
+    margin: 10px 6px;
 }
  
 .widget-mpris-subtitle {
@@ -244,11 +270,20 @@ progressbar {
     font-size: 0.8rem;
 }
 
+.widget-dnd {
+  margin: 10px 6px;
+}
+
 /* Volume */
 .widget-volume {
-  background: @background;
-  color: @background;
-  padding: 4px;
+  background: transparent;
+  padding: 6px 10px;
   margin: 6px;
-  border-radius: 6px;
+}
+
+/* Brightness */
+.widget-custom-brightness {
+  background: transparent;
+  padding: 6px 10px;
+  margin: 6px;
 }

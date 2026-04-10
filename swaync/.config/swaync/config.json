@@ -9,7 +9,7 @@
     "control-center-margin-right": 0,
     "control-center-margin-left": 0,
     "control-center-width": 400,
-    "control-center-height": 600,
+    "control-center-height": 500,
     "fit-to-screen": true,
     "layer-shell-cover-screen": true,
     "layer-shell": true,
@@ -43,10 +43,10 @@
         }
     },
     "widgets": [
+        "title",
         "label",
         "buttons-grid",
         "mpris",
-        "title",
         "dnd",
         "notifications"
     ],
@@ -70,30 +70,6 @@
         "volume": {
             "label": "󰕾",
             "show-per-app": true
-        },
-        "buttons-grid": {
-            "actions": [
-                {
-                    "label": " ",
-                    "command": "amixer set Master toggle"
-                },
-                {
-                    "label": "",
-                    "command": "amixer set Capture toggle"
-                },
-                {
-                    "label": " ",
-                    "command": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh"
-                },
-                {
-                    "label": "󰂯",
-                    "command": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
-                },
-                {
-                    "label": "󰏘",
-                    "command": "nwg-look"
-                }
-            ]
         }
     }
 }

@@ -14,8 +14,10 @@
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
+        "pulseaudio",
         "custom/networkmanager",
-        "battery"
+        "battery",
+        "custom/notification"
     ],
     "modules-right": [
         
@@ -65,7 +67,7 @@
         "format": {
             "months": "<span color='#ffead3'><b>{}</b></span>",
             "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-            "today": "<span color='#ff6699'><b>{}</b></span>"
+            "today": "<span color='#80b495'><b>{}</b></span>"
         }
         },
         "actions": {
@@ -192,10 +194,5 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-    },
-    "custom/exit": {
-        "format": "<span size='10pt'></span>",
-        "on-click": "~/.config/rofi/powermenu/powermenu.sh || pkill rofi",
-        "tooltip": false
     }
 }

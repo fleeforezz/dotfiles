@@ -16,24 +16,24 @@ configuration {
 
 * {
     border-colour:               var(selected);
-    handle-colour:               var(foreground);
+    handle-colour:               var(foreground-0);
     background-colour:           var(background);
-    foreground-colour:           var(foreground);
+    foreground-colour:           var(foreground-0);
     alternate-background:        var(background-alt);
     normal-background:           var(background);
-    normal-foreground:           var(foreground);
+    normal-foreground:           var(foreground-0);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
     selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
+    selected-normal-foreground:  var(foreground-1);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
     selected-active-background:  var(urgent);
-    selected-active-foreground:  var(background);
+    selected-active-foreground:  var(foreground-1);
     alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
+    alternate-normal-foreground: var(foreground-1);
     alternate-urgent-background: var(urgent);
     alternate-urgent-foreground: var(background);
     alternate-active-background: var(active);
@@ -58,7 +58,7 @@ window {
     border-radius:               20px;
     border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            #10191C;
+    background-color:            @normal-background;
 }
 
 /*****----- Main Box -----*****/
@@ -84,7 +84,7 @@ inputbar {
     border-radius:               10px;
     border-color:                #242D30;
     background-color:            transparent;
-    text-color:                  #556488;
+    text-color:                  @alternate-normal-foreground;
     children:                    [ "prompt", "entry" ];
 }
 
@@ -147,8 +147,8 @@ element normal.normal {
 }
 
 element selected.normal {
-    background-color:            #1D2629;
-    text-color:                  #556488;
+    background-color:            var(selected-normal-background);
+    text-color:                  var(selected-normal-foreground);
 }
 
 element-text {

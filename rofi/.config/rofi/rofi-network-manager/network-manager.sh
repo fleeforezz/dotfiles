@@ -11,6 +11,7 @@
 
 
 SESSION_TYPE="$XDG_SESSION_TYPE"
+WIFI_DEV=$(nmcli -t -f DEVICE,TYPE device | grep ':wifi' | cut -d: -f1)
 ENABLED_COLOR="#A3BE8C"
 DISABLED_COLOR="#D35F5E"
 SIGNAL_ICONS=("󰤟 " "󰤢 " "󰤥 " "󰤨 ")
@@ -127,7 +128,7 @@ manage_wifi() {
         return
     else
         # Check the state of the selected network
-        local device_status=$(nmcli -t -f STATE device show wlan0 | grep STATE | cut -d: -f2)
+        local device_status=$(nmcli -t -f STATE device show "$WIFI_DEV" | grep STATE | cut -d: -f2)
 
         # Determine action based on network state
         local action
@@ -150,7 +151,7 @@ manage_wifi() {
                 fi
                 ;;
             "  Disconnect")
-                nmcli device disconnect wlan0 && notify-send "Disconnected" "You have been disconnected from $chosen_id."
+                nmcli device disconnect "$WIFI_DEV" && notify-send "Disconnected" "You have been disconnected from $chosen_id."
                 ;;
             "  Forget")
                 nmcli connection delete id "$chosen_id" && notify-send "Forgotten" "The network $chosen_id has been forgotten."
