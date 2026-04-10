@@ -60,7 +60,7 @@ tooltip label {
     ); */
     background: @green;
     color: @bg0;
-    min-width: 15px;
+    min-width: 20px;
     transition: all 0.3s ease-in-out;
     font-size: 13px;
 }
