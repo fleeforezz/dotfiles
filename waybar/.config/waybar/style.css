@@ -25,7 +25,6 @@ window#waybar {
     background: transparent;
 }
 
-
 tooltip {
     background: @bg0;
     border: 1px solid @fg1;
@@ -46,8 +45,8 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 1px 10px;
-    border-radius: 16px;
+    padding: 1px 5px;
+    border-radius: 8px;
     color: @fg1;
     transition: all 0.3s ease-in-out;
 }
@@ -141,7 +140,7 @@ tooltip label {
 #custom-networkmanager {
 }
 #bluetooth {
-    color: @white;
+    color: @blue;
 }
 
 #tray {

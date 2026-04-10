@@ -21,9 +21,8 @@
         "bluetooth",
         "battery",
         "custom/networkmanager",
-        "tray"
-        // "custom/notification",
-        // "custom/exit"
+        "tray",
+        "custom/notification"
     ],
     "modules-right": [
         
