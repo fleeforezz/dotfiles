@@ -21,6 +21,7 @@
         "bluetooth",
         "battery",
         "custom/networkmanager",
+        "network#vpn",
         "tray",
         "custom/notification"
     ],
@@ -168,6 +169,17 @@
         "rotate": 0,
         "on-click": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh",
         "tooltip": true
+    },
+    "network#vpn": {
+        "interface": "HomeLab", // Tên interface wireguard của bạn (thường là wg0)
+        "format": "󱠾 On",
+        "format-disconnected": "󱠾 Off", // Ẩn hoàn toàn khi không bật VPN
+        "tooltip-format": "   {interface} via {gwaddr}",
+        "tooltip-format-disconnected": "Wireguard Disconnected",
+        "max-length": 10,
+        "on-click": "sh ~/.config/waybar/scripts/vpn-toggle.sh",
+        "tooltip": true,
+        "interval": 2
     },
     "bluetooth": {
         "format": " {status}",
