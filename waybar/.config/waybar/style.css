@@ -1,4 +1,4 @@
-@import 'colors/rxyhmn.css';
+@import 'colors/blue.css';
 
 * {
     border: none;
@@ -46,7 +46,7 @@ tooltip label {
 
 #workspaces button {
     padding: 1px 5px;
-    border-radius: 8px;
+    border-radius: 50px;
     color: @fg1;
     transition: all 0.3s ease-in-out;
 }

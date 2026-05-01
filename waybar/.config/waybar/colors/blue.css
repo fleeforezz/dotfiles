@@ -1,0 +1,24 @@
+/* === rxyhnm color scheme === */
+
+@define-color bg0        #0B0F1A;  /* main background */
+@define-color bg1        #12192B;  /* panels / cards */
+@define-color bg2        #1b2033;  /* elevated surfaces */
+
+@define-color fg0        #C9D6F2;  /* primary text */
+@define-color fg1        #C9D6F2;  /* secondary text */
+@define-color fg2        #a6adc8;  /* subtle text */
+
+@define-color white      #ffffff;
+@define-color red        #f38ba8;
+@define-color orange     #fab387;
+@define-color yellow     #f9e2af;
+@define-color green      #4F6FAE;
+@define-color cyan       #89dceb;
+@define-color blue       #74c7ec;
+@define-color purple     #cba6f7;
+
+@define-color accent     #cba6f7;  /* rxyhnm signature accent */
+
+@define-color border     #0b0e14;
+@define-color highlight  #2a2f4a;
+@define-color muted      #6c7086;
