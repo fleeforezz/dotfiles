@@ -14,10 +14,17 @@
     margin: 0;
 }
 
-.modules-center {
+.modules-left {
     background: @bg0;
-    padding: 7px 5px;
+    /* padding: 7px 5px; */
     border-radius: 38px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+}
+
+.modules-right {
+    background: @bg0;
+    /* padding: 7px 5px; */
+    border-radius: 0px;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
 }
 
@@ -38,15 +45,15 @@ tooltip label {
 
 #workspaces {
     background-color: @bg1;
-    border-radius: 16px;
-    padding: 1px 10px;
+    border-radius: 0px;
+    padding: 5px 10px;
     color: @fg;
     margin: 0px 5px 0px 5px;
 }
 
 #workspaces button {
     padding: 1px 5px;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     color: @fg1;
     transition: all 0.3s ease-in-out;
 }
@@ -68,8 +75,8 @@ tooltip label {
 #workspaces button:hover {
     background-color: @white;
     color: @bg0;
-    border-radius: 16px;
-    min-width: 25px;
+    /* border-radius: 16px; */
+    /* min-width: 25px; */
     background-size: 400% 400%;
 }
 
@@ -101,16 +108,16 @@ tooltip label {
 }
 
 #cpu {
-    color: @green;
+    color: @accent;
     padding: 5px 10px;
     border-radius: 38px 0px 0px 38px;
 }
 #memory {
-    color: @green;
+    color: @accent;
     padding: 5px 10px;
 }
 #disk {
-    color: @green;
+    color: @accent;
     margin-right: 10px;
     padding: 5px 10px;
     border-radius: 0px 38px 38px 0px;
@@ -118,23 +125,25 @@ tooltip label {
 
 #clock {
     color: @white;
+    margin: 0px 0px 0px 10px;
     border-radius: 38px 0px 0px 38px;
 }
 #custom-spotify {
     color: @white;
-    background-color: @bg1;
-    border-radius: 16px;
+    background-color: @bg2;
+    /* border-radius: 16px; */
     padding: 1px 10px;
-    margin: 0px 5px 0px 5px;
 }
 #pulseaudio {
     color: @orange;
 }
 #network {
     color: @purple;
+    margin-left: 10px;
 }
 #battery {
     color: @red;
+    margin-left: 10px;
     border-radius: 0px 38px 38px 0px;
 }
 #custom-networkmanager {

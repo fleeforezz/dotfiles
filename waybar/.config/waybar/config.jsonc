@@ -2,31 +2,30 @@
     "position": "top",
     "layer": "top",
     "fixed-center": true,
-    "height": 28,
-    "margin-top": 6,
-    "margin-left": 8,
-    "margin-right": 8,
+    // "height": 28,
+    // "margin-top": 6,
+    // "margin-left": 8,
+    // "margin-right": 8,
 
     "modules-left": [
-        
+        "hyprland/workspaces",
+        "custom/spotify"
     ],
     "modules-center": [
+
+    ],
+    "modules-right": [
         "cpu",
         "memory",
         "disk",
-        "clock",
-        "custom/spotify",
-        "hyprland/workspaces",
         "pulseaudio",
         "bluetooth",
         "battery",
         "custom/networkmanager",
         "network#vpn",
+        "clock",
         "tray",
         "custom/notification"
-    ],
-    "modules-right": [
-        
     ],
 
     "cpu": {
