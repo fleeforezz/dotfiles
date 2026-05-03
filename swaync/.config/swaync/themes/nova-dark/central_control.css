@@ -48,7 +48,7 @@ scale slider {
   background: rgba(15, 25, 30, 0.75);
   border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.05); /* softer */
-   backdrop-filter: blur(20px); /* 🔥 glass effect */
+  backdrop-filter: blur(20px); /* 🔥 glass effect */
   margin: 18px;
   padding: 12px;
 }

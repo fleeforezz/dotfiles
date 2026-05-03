@@ -153,9 +153,9 @@ tooltip label {
 }
 
 #tray {
-    margin-left: 10px;
     padding: 5px 10px;
     border-radius: 38px;
+    color: white;
 }
 #custom-notification {
     color: @white;
