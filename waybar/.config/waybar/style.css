@@ -67,7 +67,7 @@ tooltip label {
     ); */
     background: @green;
     color: @bg0;
-    min-width: 20px;
+    min-width: 15px;
     transition: all 0.3s ease-in-out;
     font-size: 13px;
 }
@@ -76,14 +76,14 @@ tooltip label {
     background-color: @white;
     color: @bg0;
     /* border-radius: 16px; */
-    /* min-width: 25px; */
+    min-width: 15px;
     background-size: 400% 400%;
 }
 
 #workspaces button.urgent {
     background-color: @red;
     color: @bg0;
-    border-radius: 16px;
+    border-radius: 0px;
     min-width: 25px;
     background-size: 400% 400%;
     transition: all 0.3s ease-in-out;
