@@ -2,7 +2,7 @@
 
 @define-color bg0        #0B0F1A;  /* main background */
 @define-color bg1        #12192B;  /* panels / cards */
-@define-color bg2        #1b2033;  /* elevated surfaces */
+@define-color bg2        #4F6FAE;  /* elevated surfaces */
 
 @define-color fg0        #C9D6F2;  /* primary text */
 @define-color fg1        #C9D6F2;  /* secondary text */
@@ -12,7 +12,7 @@
 @define-color red        #f38ba8;
 @define-color orange     #fab387;
 @define-color yellow     #f9e2af;
-@define-color green      #4F6FAE;
+@define-color green      #80b495;
 @define-color cyan       #89dceb;
 @define-color blue       #74c7ec;
 @define-color purple     #cba6f7;

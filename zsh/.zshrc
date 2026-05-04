@@ -119,7 +119,7 @@ alias cls='clear'
 eval "$(oh-my-posh init zsh --config ~/.poshthemes/test.omp.json)"
 
 # Pokemon ColorScript
-pokemon-colorscripts -rn cleffa,charmeleon,taillow
+# pokemon-colorscripts -rn cleffa,charmeleon,taillow
 
 
 

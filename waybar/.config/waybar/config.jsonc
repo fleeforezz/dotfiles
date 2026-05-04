@@ -12,7 +12,6 @@
         "custom/spotify"
     ],
     "modules-center": [
-
     ],
     "modules-right": [
         "cpu",
@@ -21,12 +20,25 @@
         "pulseaudio",
         "bluetooth",
         "battery",
+        "power-profiles-daemon",
         "custom/networkmanager",
         "network#vpn",
         "clock",
         "tray",
         "custom/notification"
     ],
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
 
     "cpu": {
         "interval": 10,
