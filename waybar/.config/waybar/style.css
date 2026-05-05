@@ -91,6 +91,7 @@ tooltip label {
 
 #custom-aur,
 #custom-pacman,
+#custom-wireguard,
 #cpu,
 #memory,
 #disk,
@@ -138,9 +139,6 @@ tooltip label {
 }
 #battery {
     color: @green;
-}
-
-#custom-networkmanager {
 }
 
 #bluetooth {
@@ -191,4 +189,12 @@ tooltip label {
 #custom-pacman.updates {
     color: #f38ba8; /* red/pink */
     font-weight: bold;
+}
+
+#custom-wireguard.connected {
+    color: #a6e3a1; /* green */
+}
+
+#custom-wireguard.disconnected {
+    color: @red; /* red */
 }

@@ -70,7 +70,7 @@ get_status() {
     fi
 
     if [[ "$SESSION_TYPE" == "wayland" ]]; then
-        echo "<span color=\"$status_color\">$status_icon $text </span>"
+        echo "<span color=\"$status_color\">$status_icon $text</span>"
     else
         echo "%{F$status_color}$status_icon $text%{F-}"
     fi

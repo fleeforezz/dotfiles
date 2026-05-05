@@ -1,7 +1,25 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-if ip link show HomeLab > /dev/null 2>&1; then
-    sudo wg-quick down HomeLab && notify-send "WireGuard" "HomeLab Disconnected" -i network-vpn
+INTERFACE="HomeLab"
+
+# Check status
+if ip link show "$INTERFACE" 2>/dev/null | grep -q "state UP"; then
+    status="connected"
+    text=" VPN"
 else
-    sudo wg-quick up HomeLab && notify-send "WireGuard" "HomeLab Connected" -i network-vpn
+    status="disconnected"
+    text=" VPN"
 fi
+
+# Toggle action
+if [ "$1" = "toggle" ]; then
+    if [ "$status" = "connected" ]; then
+        sudo wg-quick down "$INTERFACE"
+    else
+        sudo wg-quick up "$INTERFACE"
+    fi
+    exit 0
+fi
+
+# Output for Waybar
+echo "{\"text\": \"$text\", \"class\": \"$status\", \"tooltip\": \"Interface: $INTERFACE\"}"
