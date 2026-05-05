@@ -1,14 +1,11 @@
 {
     "position": "top",
     "layer": "top",
-    "fixed-center": true,
-    // "height": 28,
-    // "margin-top": 6,
-    // "margin-left": 8,
-    // "margin-right": 8,
 
     "modules-left": [
         "hyprland/workspaces",
+        "custom/pacman",
+        "custom/aur",
         "custom/spotify"
     ],
     "modules-center": [
@@ -226,5 +223,19 @@
         "format": "<span size='10pt'></span>",
         "on-click": "~/.config/rofi/powermenu/powermenu.sh || pkill rofi",
         "tooltip": false
+    },
+    "custom/aur": {
+        "exec": "~/.config/waybar/scripts/aur-count.sh",
+        "interval": 300,
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "kitty -e yay -Syu"
+    },
+    "custom/pacman": {
+        "exec": "~/.config/waybar/scripts/pacman-count.sh",
+        "interval": 300,
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "kitty -e zsh -c 'fastfetch && sleep 0.5 && sudo pacman -Syu; exec zsh'"
     }
 }
