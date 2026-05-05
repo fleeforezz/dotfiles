@@ -28,9 +28,9 @@ confirm_cmd() {
 	rofi -dmenu -markup-rows \
 		-p '' \
 		-mesg 'Are you Sure?' \
-		# -theme-str 'window {width: 300px; height: 250px;}' \
+		-theme-str 'window {width: 200px; height: 150px;}' \
 		-theme-str 'listview {columns: 1; lines: 1;}' \
-		-theme-str 'element-text {horizontal-align: 0.5;}' \
+		-theme-str 'element-text {horizontal-align: 0;}' \
 		-theme ${dir}/${theme}.rasi
 }
 

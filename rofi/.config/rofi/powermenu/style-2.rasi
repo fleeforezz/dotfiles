@@ -170,7 +170,7 @@ message {
     border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  var(background);
 }
 
 textbox {
