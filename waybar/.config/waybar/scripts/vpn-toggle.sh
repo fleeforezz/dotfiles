@@ -2,8 +2,8 @@
 
 INTERFACE="HomeLab"
 
-# Check status
-if ip link show "$INTERFACE" 2>/dev/null | grep -q "state UP"; then
+# Check status (WireGuard-native)
+if wg show "$INTERFACE" &>/dev/null; then
     status="connected"
     text=" VPN"
 else
