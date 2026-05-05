@@ -7,28 +7,28 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu"
-theme='style-launcher'  # New theme name
+theme='style-2'  # New theme name
 
 # Options (using nerd font icons)
 shutdown='󰐥  Shutdown'
 reboot='󰜉  Reboot'
-lock='󰌾  Lock'
-suspend='󰒲  Suspend'
-logout='󰍃  Logout'
+# lock='󰌾  Lock'
+suspend='󰒲  Sleep'
+# logout='󰍃  Logout'
 
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu -markup-rows \
-		-p "Power Menu" \
+		-p "" \
 		-theme ${dir}/${theme}.rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
 	rofi -dmenu -markup-rows \
-		-p 'Confirmation' \
+		-p '' \
 		-mesg 'Are you Sure?' \
-		-theme-str 'window {width: 300px; height: 250px;}' \
+		# -theme-str 'window {width: 300px; height: 250px;}' \
 		-theme-str 'listview {columns: 1; lines: 1;}' \
 		-theme-str 'element-text {horizontal-align: 0.5;}' \
 		-theme ${dir}/${theme}.rasi
@@ -41,7 +41,7 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$suspend\n$reboot\n$shutdown" | rofi_cmd
 }
 
 # Execute Command
@@ -54,8 +54,8 @@ run_cmd() {
 			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
 			systemctl suspend
-		elif [[ $1 == '--logout' ]]; then
-			hyprctl dispatch exit
+		# elif [[ $1 == '--logout' ]]; then
+		# 	hyprctl dispatch exit
 		fi
 	else
 		exit 0
@@ -71,13 +71,13 @@ case ${chosen} in
     *"Reboot"*)
 		run_cmd --reboot
         ;;
-    *"Lock"*)
-		hyprlock
-        ;;
+    # *"Lock"*)
+	# 	hyprlock
+    #     ;;
     *"Suspend"*)
 		run_cmd --suspend
         ;;
-    *"Logout"*)
-		run_cmd --logout
-        ;;
+    # *"Logout"*)
+	# 	run_cmd --logout
+    #     ;;
 esac
