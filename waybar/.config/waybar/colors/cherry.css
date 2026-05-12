@@ -1,9 +1,14 @@
-@define-color bg0        #1a1f23;  /* main background - deep charcoal */
+@define-color bg0        #121212;  /* main background - deep charcoal */
 @define-color bg1        #252b30;  /* panels / cards - slightly lighter */
 @define-color bg2        #2f3539;  /* elevated surfaces */
-@define-color fg0        #e8e6e3;  /* primary text - soft white */
+@define-color bg3        #ce5757;  /* selected background */
+@define-color bg4        #c87777;  /* hover background */
+
+@define-color fg0        #ded3d3;  /* primary text - soft white */
 @define-color fg1        #c4b5b0;  /* secondary text - warm gray */
 @define-color fg2        #8a8885;  /* subtle text - muted gray */
+@define-color fg3        #121212;  /* selected foreground */
+
 @define-color red        #d4949a;  /* soft dusty rose */
 @define-color orange     #daa29a;  /* peachy pink */
 @define-color yellow     #e5c4b8;  /* warm cream */
