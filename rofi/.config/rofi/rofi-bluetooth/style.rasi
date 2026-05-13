@@ -58,19 +58,19 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    height:                      600px;
+    width:                       350px;
+    height:                      400px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               20px;
-    border-color:                @border-colour;
+    border:                      1.5px solid;
+    border-radius:               5px;
+    border-color:                var(border);
     cursor:                      "default";
-    background-color:            #10191C;
+    background-color:            var(background);
 }
 
 /*****----- Main Box -----*****/
@@ -78,10 +78,10 @@ mainbox {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     30px;
+    padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
-    border-color:                @border-colour;
+    border-color:                var(border);
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
 }
@@ -90,13 +90,13 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px 0px 15px 0px;
-    padding:                     15px;
-    border:                      2px solid;
-    border-radius:               10px;
-    border-color:                #242D30;
-    background-color:            transparent;
-    text-color:                  #556488;
+    margin:                      4px 4px 4px 4px;
+    padding:                     10px 10px 10px 5px;
+    border:                      0px solid;
+    border-radius:               3px;
+    border-color:                var(border);
+    background-color:            var(background-alt);
+    text-color:                  var(foreground-1);
     children:                    [ "prompt", "entry" ];
 }
 
@@ -111,7 +111,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Search devices...";
+    placeholder:                 "Go..";
     placeholder-color:           inherit;
 }
 
@@ -119,7 +119,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       8;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -135,7 +135,7 @@ listview {
     border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  var(foreground-0);
     cursor:                      "default";
 }
 
@@ -144,23 +144,23 @@ element {
     enabled:                     true;
     spacing:                     8px;
     margin:                      0px;
-    padding:                     15px;
+    padding:                     5px 15px 5px 15px;
     border:                      0px solid;
     border-radius:               10px;
     border-color:                @border-colour;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  var(foreground-2);
     cursor:                      pointer;
 }
 
 element normal.normal {
     background-color:            transparent;
-    text-color:                  var(normal-foreground);
+    text-color:                  var(foreground-2);
 }
 
 element selected.normal {
-    background-color:            #1D2629;
-    text-color:                  #556488;
+    background-color:            transparent;
+    text-color:                  var(background-alt);
 }
 
 element-text {
@@ -181,7 +181,7 @@ message {
     border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    text-color:                  @foreground-colour;
+    text-color:                  var(foreground-0);
 }
 
 textbox {
@@ -190,7 +190,7 @@ textbox {
     border-radius:               10px;
     border-color:                @border-colour;
     background-color:            #1D2629;
-    text-color:                  @foreground-colour;
+    text-color:                  var(background-alt);
     vertical-align:              0.5;
     horizontal-align:            0.0;
 }

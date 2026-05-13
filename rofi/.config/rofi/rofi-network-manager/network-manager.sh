@@ -172,7 +172,7 @@ manage_wifi() {
 
     # Show all available networks
     local chosen_network
-    chosen_network=$(echo "$formatted_list" | rofi -dmenu -theme "$ROFI_THEME" -i -p "Select Wi-Fi Network: ")
+    chosen_network=$(echo "$formatted_list" | rofi -dmenu -theme "$ROFI_THEME" -i -p "")
     [[ -z "$chosen_network" ]] && return
 
     # Find matching SSID
@@ -305,7 +305,7 @@ main_menu() {
 
     local chosen_option
     chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥  Manage Ethernet" \
-        | rofi -dmenu -theme "$ROFI_THEME" -p "󰀂  Network Management: ")
+        | rofi -dmenu -theme "$ROFI_THEME" -p "")
 
     case "$chosen_option" in
         "$wifi_toggle")
