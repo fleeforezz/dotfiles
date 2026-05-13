@@ -18,6 +18,12 @@ WIFI_CONNECTED_ICON=" "
 ETHERNET_CONNECTED_ICON=" "
 ROFI_THEME="$HOME/.config/rofi/rofi-network-manager/style.rasi"
 
+# ─── VPN ────────────────────────────────────────────────────────────────────
+
+VPN_INTERFACE="HomeLab"
+VPN_CONNECTED_ICON="󰍁"
+VPN_DISCONNECTED_ICON="󰿇"
+
 # ─── Helpers ────────────────────────────────────────────────────────────────
 
 get_connected_wifi() {
@@ -32,6 +38,28 @@ get_signal_icon() {
         echo "${SECURED_SIGNAL_ICONS[$level]}"
     else
         echo "${SIGNAL_ICONS[$level]}"
+    fi
+}
+
+# ─── VPN Helpers ────────────────────────────────────────────────────────────
+
+vpn_connected() {
+    ip link show "$VPN_INTERFACE" &>/dev/null
+}
+
+toggle_vpn() {
+    if vpn_connected; then
+        if sudo wg-quick down "$VPN_INTERFACE"; then
+            notify-send "WireGuard" "VPN disconnected." --icon=network-vpn-disconnected
+        else
+            notify-send "WireGuard" "Failed to disconnect VPN." --icon=dialog-error
+        fi
+    else
+        if sudo wg-quick up "$VPN_INTERFACE"; then
+            notify-send "WireGuard" "VPN connected." --icon=network-vpn
+        else
+            notify-send "WireGuard" "Failed to connect VPN." --icon=dialog-error
+        fi
     fi
 }
 
@@ -51,10 +79,13 @@ get_status() {
     eth_dev=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ':ethernet:connected' | cut -d: -f1 | head -1)
     wifi_dev=$(nmcli -t -f DEVICE,TYPE,STATE device | grep ':wifi:connected' | cut -d: -f1 | head -1)
 
+    local vpn_icon=""
+    vpn_connected && vpn_icon=" $VPN_CONNECTED_ICON"
+
     if [[ -n "$eth_dev" ]]; then
         status_icon="󰈀"
         status_color=$ENABLED_COLOR
-        text="Wired($eth_dev) "
+        text="Wired($eth_dev)$vpn_icon"
     elif [[ -n "$wifi_dev" ]]; then
         local wifi_info signal security ssid signal_icon
         wifi_info=$(nmcli --terse --fields IN-USE,SIGNAL,SECURITY,SSID device wifi list --rescan no | grep '^\*')
@@ -62,7 +93,7 @@ get_status() {
         signal_icon=$(get_signal_icon "$signal" "$security")
         status_icon="$signal_icon"
         status_color=$ENABLED_COLOR
-        text="$ssid"
+        text="$ssid$vpn_icon"
     else
         status_icon=""
         status_color=$DISABLED_COLOR
@@ -294,17 +325,28 @@ main_menu() {
     wifi_status=$(nmcli -fields WIFI g)
 
     if [[ "$wifi_status" =~ "enabled" ]]; then
-        wifi_toggle="󱛅  Disable Wi-Fi"
+        wifi_toggle="󰤮  Disable Wi-Fi"
         wifi_toggle_command="off"
-        manage_wifi_btn="\n󱓥  Manage Wi-Fi"
+        manage_wifi_btn="\n  Manage Wi-Fi"
     else
-        wifi_toggle="󱚽  Enable Wi-Fi"
+        wifi_toggle="  Enable Wi-Fi"
         wifi_toggle_command="on"
         manage_wifi_btn=""
     fi
 
+    # local chosen_option
+    # chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󰈀  Manage Ethernet" \
+    #     | rofi -dmenu -theme "$ROFI_THEME" -p "")
+    local vpn_option
+
+    if vpn_connected; then
+        vpn_option="$VPN_CONNECTED_ICON  Disconnect VPN"
+    else
+        vpn_option="$VPN_DISCONNECTED_ICON  Connect VPN"
+    fi
+
     local chosen_option
-    chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥  Manage Ethernet" \
+    chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󰈀  Manage Ethernet\n$vpn_option" \
         | rofi -dmenu -theme "$ROFI_THEME" -p "")
 
     case "$chosen_option" in
@@ -316,11 +358,17 @@ main_menu() {
                 notify-send "Wi-Fi" "Wi-Fi has been disabled." --icon=network-wireless-offline
             fi
             ;;
-        "󱓥  Manage Wi-Fi")
+        "  Manage Wi-Fi")
             manage_wifi
             ;;
-        "󱓥  Manage Ethernet")
+        "󰈀  Manage Ethernet")
             manage_ethernet
+            ;;
+        "$VPN_CONNECTED_ICON  Disconnect VPN")
+            toggle_vpn
+            ;;
+        "$VPN_DISCONNECTED_ICON  Connect VPN")
+            toggle_vpn
             ;;
     esac
 }
