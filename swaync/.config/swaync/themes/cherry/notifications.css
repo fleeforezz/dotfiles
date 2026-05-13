@@ -1,12 +1,6 @@
-@define-color text            @fg0;
-@define-color background-alt  @bg0;
-@define-color selected        @green;
-@define-color hover           @color5;
-@define-color urgent          @color2;
-
 * {
 
-  color: @text;
+  color: @fg0;
 
   all: unset;
   font-size: 14px;
@@ -22,8 +16,8 @@
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: @background-alt;
-  border: 2px solid #4F6FAE;
+  background: @bg0;
+  border: 2px solid @bg3;
   margin-top: 5px;
   padding: 0;
 }

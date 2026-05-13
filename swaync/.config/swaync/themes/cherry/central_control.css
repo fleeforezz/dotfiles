@@ -1,16 +1,9 @@
-@define-color text            @fg0;
-@define-color background-alt  @bg0;
-@define-color selected        @blue;
-@define-color hover           alpha(@selected, .4);
-@define-color urgent          @red;
-@define-color background      @bg0;
-
 * {
   color:            @text;
 
   all: unset;
   font-size: 14px;
-  font-family: "JetBrains Mono Nerd Font 10";
+  font-family: "JetBrains Mono Nerd Font Bold 10";
   transition: 200ms;
 
 }
@@ -19,7 +12,7 @@
 .blank-window {  
   background: transparent;  
 }
-  
+
 /* CONTROL CENTER ------------------------------------------------------------------------ */
 
 /* Sliders (volume / brightness) */
@@ -45,10 +38,10 @@ scale slider {
 }
 
 .control-center {
-  background: rgba(15, 25, 30, 0.75);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.05); /* softer */
-  backdrop-filter: blur(20px); /* 🔥 glass effect */
+  background: @bg0;
+  border-radius: 5px;
+  border: 1.5px solid @bg3;
+  /* backdrop-filter: blur(20px); */
   margin: 18px;
   padding: 12px;
 }
