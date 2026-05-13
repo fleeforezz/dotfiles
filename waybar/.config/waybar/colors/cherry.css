@@ -1,7 +1,7 @@
 @define-color bg0        #121212;  /* main background - deep charcoal */
 @define-color bg1        #252b30;  /* panels / cards - slightly lighter */
 @define-color bg2        #2f3539;  /* elevated surfaces */
-@define-color bg3        #ce5757;  /* selected background */
+@define-color bg3        #b59790;  /* selected background */
 @define-color bg4        #c87777;  /* hover background */
 
 @define-color fg0        #ded3d3;  /* primary text - soft white */
@@ -16,7 +16,9 @@
 @define-color cyan       #b8c4c9;  /* soft blue-gray */
 @define-color blue       #a8b4ba;  /* muted steel blue */
 @define-color purple     #c4a4ab;  /* mauve */
-@define-color accent     #d4949a;  /* cherry blossom pink */
+
+@define-color accent     #940404;  /* cherry blossom pink */
+
 @define-color border     #16191c;  /* very dark border */
 @define-color highlight  #b87d85;  /* deeper rose for highlights */
 @define-color muted      #6e6c6a;  /* desaturated gray */

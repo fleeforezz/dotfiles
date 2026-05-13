@@ -5,7 +5,7 @@
     border-radius: 0px;
 
     font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
-    font-weight: bold;    
+    font-weight: bold;
 
     font-size: 14px;
 
@@ -40,9 +40,9 @@ tooltip label {
 #workspaces {
     background-color: @bg0;
     border-radius: 0px;
-    padding: 5px 10px;
+    padding: 5px 0px;
     color: @fg;
-    margin: 0px 5px 0px 5px;
+    /* margin: 0px 5px 0px 5px; */
 }
 
 #workspaces button {
@@ -78,6 +78,7 @@ tooltip label {
 #custom-aur,
 #custom-pacman,
 #custom-wireguard,
+#power-profiles-daemon,
 #cpu,
 #memory,
 #disk,
@@ -97,34 +98,30 @@ tooltip label {
 }
 
 #cpu {
-    color: @accent;
-    /* padding: 5px 10px; */
-    border-radius: 38px 0px 0px 38px;
+    color: @blue;
 }
 #memory {
-    color: @accent;
-    /* padding: 5px 10px; */
+    color: @blue;
 }
 #disk {
-    color: @accent;
-    /* padding: 5px 10px; */
+    color: @blue;
 }
 
 #clock {
-    color: @white;
+    color: @blue;
 }
 #custom-spotify {
-    color: @white;
+    color: @blue;
     background-color: @bg0;
 }
 #pulseaudio {
-    color: @orange;
+    color: @blue;
 }
 #network {
-    color: @purple;
+    color: @blue;
 }
 #battery {
-    color: @green;
+    color: @blue;
 }
 
 #bluetooth {
@@ -143,29 +140,29 @@ tooltip label {
 }
 
 #power-profiles-daemon.performance {
-    background-color: @red;
-    color: @bg0;
-    padding: 5px 10px;
+    background-color: @bg0;
+    color: @blue;
+    /* padding: 5px 10px; */
 }
 
 #power-profiles-daemon.balanced {
-    background-color: @yellow;
-    color: @bg0;
-    padding: 5px 10px;
+    background-color: @bg0;
+    color: @blue;
+    /* padding: 5px 10px; */
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: @green;
-    color: @bg0;
-    padding: 5px 10px;
+    background-color: @bg0;
+    color: @blue;
+    /* padding: 5px 10px; */
 }
 
 #custom-aur {
-    color: #a6e3a1;
+    color: @blue;
 }
 
 #custom-pacman {
-    color: @yellow;
+    color: @blue;
 }
 
 #custom-aur.updated {
@@ -178,9 +175,9 @@ tooltip label {
 }
 
 #custom-wireguard.connected {
-    color: #a6e3a1; /* green */
+    color: @red; /* green */
 }
 
 #custom-wireguard.disconnected {
-    color: @red; /* red */
+    color: @blue; /* red */
 }

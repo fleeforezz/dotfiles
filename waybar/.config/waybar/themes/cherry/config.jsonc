@@ -113,8 +113,8 @@
         },
         "persistent-workspaces": {
             "HDMI-A-1": [1, 2, 3, 4, 5],
-            "DP-1": [6, 7, 8, 9, 10],
-            "DP-2": [11, 12, 13, 14, 15],
+            // "DP-1": [6, 7, 8, 9, 10],
+            // "DP-2": [11, 12, 13, 14, 15],
             "*": 5 // 5 workspaces by default on every monitor
         }
     },
@@ -170,7 +170,7 @@
         "max-length": 25
     },
     "custom/networkmanager": {
-        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#7c7b80\" --enabled-color \"#cba6f7\" | cat",
+        "exec": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh --status --disabled-color \"#a8b4ba\" --enabled-color \"#a8b4ba\" | cat",
         "return-type": "raw",
         "format": "{}",
         "interval": 3,
