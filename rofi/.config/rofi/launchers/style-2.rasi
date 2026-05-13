@@ -43,8 +43,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    height:                      300px;
+    width:                       350px;
+    height:                      500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -52,11 +52,11 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @border-colour;
+    border:                      1.5px solid;
+    border-radius:               5px;
+    border-color:                var(border);
     cursor:                      "default";
-    background-color:            @normal-background;
+    background-color:            var(background);
 }
 
 /*****----- Main Box -----*****/
@@ -66,7 +66,7 @@ mainbox {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               0px;
     border-color:                var(border);
     background-color:            transparent;
     children:                    [ "inputbar", "message", "listview" ];
@@ -76,13 +76,13 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px 0px 15px 0px;
-    padding:                     15px 15px 15px 5px;
+    margin:                      4px 4px 4px 4px;
+    padding:                     10px 10px 10px 5px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               3px;
     border-color:                var(border);
     background-color:            var(background-alt);
-    text-color:                  var(foreground-0);
+    text-color:                  var(foreground-1);
     children:                    [ "prompt", "entry" ];
 }
 
@@ -103,7 +103,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "";
+    placeholder:                 "Go..";
     placeholder-color:           inherit;
 }
 
@@ -160,11 +160,11 @@ element normal.urgent {
 }
 element normal.active {
     background-color:            transparent;
-    text-color:                  var(foreground-0);
+    text-color:                  var(background-alt);
 }
 element selected.normal {
     background-color:            transparent;
-    text-color:                  var(foreground-0);
+    text-color:                  var(background-alt);
 }
 element selected.urgent {
     background-color:            transparent;
@@ -189,7 +189,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        24px;
+    size:                        20px;
     cursor:                      inherit;
 }
 element-text {
