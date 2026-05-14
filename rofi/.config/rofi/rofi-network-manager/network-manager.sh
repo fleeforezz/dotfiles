@@ -121,40 +121,108 @@ toggle_wifi() {
 
 # ─── Connect with retry ─────────────────────────────────────────────────────
 
+# connect_wifi() {
+#     local ssid="$1"
+#     local max_attempts=3
+#     local attempt=1
+#     local saved_connections
+#     saved_connections=$(nmcli -g NAME connection show)
+
+#     while [[ $attempt -le $max_attempts ]]; do
+#         notify-send "Wi-Fi" "Connecting to \"$ssid\"... (attempt $attempt/$max_attempts)" --icon=network-wireless
+
+#         if echo "$saved_connections" | grep -Fxq "$ssid"; then
+#             # Known network — just bring it up
+#             if nmcli connection up id "$ssid" 2>/dev/null | grep -q "successfully"; then
+#                 notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
+#                 return 0
+#             fi
+#         else
+#             # New network — ask for password once on first attempt
+#             if [[ $attempt -eq 1 ]]; then
+#                 wifi_password=$(rofi -dmenu -theme "$ROFI_THEME" -p "Wi-Fi Password: " -password)
+#                 [[ -z "$wifi_password" ]] && return 1
+#             fi
+#             if nmcli device wifi connect "$ssid" password "$wifi_password" 2>/dev/null | grep -q "successfully"; then
+#                 notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
+#                 return 0
+#             fi
+#         fi
+
+#         attempt=$(( attempt + 1 ))
+#         [[ $attempt -le $max_attempts ]] && sleep 2
+#     done
+
+#     notify-send "Connection Failed" "Could not connect to \"$ssid\" after $max_attempts attempts." --icon=network-error
+#     return 1
+# }
+
 connect_wifi() {
     local ssid="$1"
-    local max_attempts=3
-    local attempt=1
-    local saved_connections
-    saved_connections=$(nmcli -g NAME connection show)
 
-    while [[ $attempt -le $max_attempts ]]; do
-        notify-send "Wi-Fi" "Connecting to \"$ssid\"... (attempt $attempt/$max_attempts)" --icon=network-wireless
+    # Detect security type
+    local security
+    security=$(nmcli -t -f SSID,SECURITY device wifi list | \
+        grep "^${ssid}:" | head -1 | cut -d: -f2)
 
-        if echo "$saved_connections" | grep -Fxq "$ssid"; then
-            # Known network — just bring it up
-            if nmcli connection up id "$ssid" 2>/dev/null | grep -q "successfully"; then
-                notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
-                return 0
-            fi
+    # ─────────────────────────────────────────
+    # Enterprise Wi-Fi
+    # ─────────────────────────────────────────
+    if [[ "$security" =~ WPA2-ENTERPRISE|802.1X ]]; then
+
+        local username password
+
+        username=$(rofi -dmenu -theme "$ROFI_THEME" \
+            -p "Username:")
+        [[ -z "$username" ]] && return 1
+
+        password=$(rofi -dmenu -theme "$ROFI_THEME" \
+            -p "Password:" -password)
+        [[ -z "$password" ]] && return 1
+
+        notify-send "Wi-Fi" "Connecting to enterprise network..."
+
+        nmcli connection delete "$ssid" 2>/dev/null
+
+        nmcli connection add \
+            type wifi \
+            con-name "$ssid" \
+            ifname "$WIFI_DEV" \
+            ssid "$ssid"
+
+        nmcli connection modify "$ssid" \
+            wifi-sec.key-mgmt wpa-eap \
+            802-1x.eap peap \
+            802-1x.identity "$username" \
+            802-1x.password "$password" \
+            802-1x.phase2-auth mschapv2
+
+        if nmcli connection up "$ssid"; then
+            notify-send "Connected" \
+                "Connected to enterprise Wi-Fi \"$ssid\"."
+            return 0
         else
-            # New network — ask for password once on first attempt
-            if [[ $attempt -eq 1 ]]; then
-                wifi_password=$(rofi -dmenu -theme "$ROFI_THEME" -p "Wi-Fi Password: " -password)
-                [[ -z "$wifi_password" ]] && return 1
-            fi
-            if nmcli device wifi connect "$ssid" password "$wifi_password" 2>/dev/null | grep -q "successfully"; then
-                notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
-                return 0
-            fi
+            notify-send "Failed" \
+                "Could not connect to \"$ssid\"."
+            return 1
         fi
+    fi
 
-        attempt=$(( attempt + 1 ))
-        [[ $attempt -le $max_attempts ]] && sleep 2
-    done
+    # ─────────────────────────────────────────
+    # Normal WPA/WPA2 network
+    # ─────────────────────────────────────────
 
-    notify-send "Connection Failed" "Could not connect to \"$ssid\" after $max_attempts attempts." --icon=network-error
-    return 1
+    local wifi_password
+    wifi_password=$(rofi -dmenu -theme "$ROFI_THEME" \
+        -p "Wi-Fi Password:" -password)
+
+    [[ -z "$wifi_password" ]] && return 1
+
+    if nmcli device wifi connect "$ssid" password "$wifi_password"; then
+        notify-send "Connected" "Connected to \"$ssid\"."
+    else
+        notify-send "Failed" "Could not connect."
+    fi
 }
 
 # ─── Manage Wi-Fi ───────────────────────────────────────────────────────────
