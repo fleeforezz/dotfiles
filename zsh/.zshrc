@@ -123,3 +123,4 @@ eval "$(oh-my-posh init zsh --config ~/.poshthemes/test.omp.json)"
 
 
 
+export PATH="$PATH:$HOME/.dotnet/tools"
