@@ -85,7 +85,7 @@ get_status() {
     if [[ -n "$eth_dev" ]]; then
         status_icon="󰈀"
         status_color=$ENABLED_COLOR
-        text="Wired($eth_dev)$vpn_icon"
+        text="Wired ($eth_dev)$vpn_icon"
     elif [[ -n "$wifi_dev" ]]; then
         local wifi_info signal security ssid signal_icon
         wifi_info=$(nmcli --terse --fields IN-USE,SIGNAL,SECURITY,SSID device wifi list --rescan no | grep '^\*')
@@ -120,42 +120,6 @@ toggle_wifi() {
 }
 
 # ─── Connect with retry ─────────────────────────────────────────────────────
-
-# connect_wifi() {
-#     local ssid="$1"
-#     local max_attempts=3
-#     local attempt=1
-#     local saved_connections
-#     saved_connections=$(nmcli -g NAME connection show)
-
-#     while [[ $attempt -le $max_attempts ]]; do
-#         notify-send "Wi-Fi" "Connecting to \"$ssid\"... (attempt $attempt/$max_attempts)" --icon=network-wireless
-
-#         if echo "$saved_connections" | grep -Fxq "$ssid"; then
-#             # Known network — just bring it up
-#             if nmcli connection up id "$ssid" 2>/dev/null | grep -q "successfully"; then
-#                 notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
-#                 return 0
-#             fi
-#         else
-#             # New network — ask for password once on first attempt
-#             if [[ $attempt -eq 1 ]]; then
-#                 wifi_password=$(rofi -dmenu -theme "$ROFI_THEME" -p "Wi-Fi Password: " -password)
-#                 [[ -z "$wifi_password" ]] && return 1
-#             fi
-#             if nmcli device wifi connect "$ssid" password "$wifi_password" 2>/dev/null | grep -q "successfully"; then
-#                 notify-send "Connected" "Successfully connected to \"$ssid\"." --icon=network-wireless
-#                 return 0
-#             fi
-#         fi
-
-#         attempt=$(( attempt + 1 ))
-#         [[ $attempt -le $max_attempts ]] && sleep 2
-#     done
-
-#     notify-send "Connection Failed" "Could not connect to \"$ssid\" after $max_attempts attempts." --icon=network-error
-#     return 1
-# }
 
 connect_wifi() {
     local ssid="$1"
@@ -402,9 +366,6 @@ main_menu() {
         manage_wifi_btn=""
     fi
 
-    # local chosen_option
-    # chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󰈀  Manage Ethernet" \
-    #     | rofi -dmenu -theme "$ROFI_THEME" -p "")
     local vpn_option
 
     if vpn_connected; then
