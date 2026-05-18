@@ -2,6 +2,7 @@
 
 * {
     border: none;
+    background: @bg0;
     border-radius: 0px;
 
     font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
@@ -15,15 +16,11 @@
 }
 
 .modules-left {
-    background: @bg0;
+    margin-left: 8px;
 }
 
 .modules-right {
-    background: @bg0;
-}
-
-window#waybar {
-    background: @bg0;
+    margin-right: 8px;
 }
 
 tooltip {
@@ -42,43 +39,46 @@ tooltip label {
     border-radius: 0px;
     padding: 5px 0px;
     color: @fg0;
-    /* margin: 0px 5px 0px 5px; */
-}
-
-#workspaces button {
-    padding: 1px 5px;
-    color: @fg1;
-    border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.active {
+#workspaces button {
+    all: initial;
+    padding: 0 6px;
+    margin: 0 1.5px;
+    min-width: 9px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.empty {
+    opacity: 0.5;
+}
+
+/* #workspaces button.active {
     background: @bg3;
     color: @fg3;
     min-width: 15px;
     transition: all 0.3s ease-in-out;
     font-size: 13px;
-}
+} */
 
-#workspaces button:hover {
+/* #workspaces button:hover {
     background-color: @bg4;
     color: @fg3;
     min-width: 15px;
     background-size: 400% 400%;
-}
+} */
 
-#workspaces button.urgent {
+/* #workspaces button.urgent {
     background-color: @white;
     color: @fg3;
     border-radius: 0px;
     min-width: 25px;
     background-size: 400% 400%;
     transition: all 0.3s ease-in-out;
-}
+} */
 
-#custom-aur,
 #custom-pacman,
-#custom-wireguard,
 #power-profiles-daemon,
 #cpu,
 #memory,
@@ -90,8 +90,7 @@ tooltip label {
 #battery,
 #custom-networkmanager,
 #bluetooth,
-#custom-notification,
-#custom-exit {
+#custom-notification {
     background-color: @bg0;
     padding: 5 10px;
     border: none;
@@ -129,9 +128,6 @@ tooltip label {
     color: @blue;
 }
 
-#tray {
-    color: white;
-}
 #custom-notification {
     color: @white;
     padding: 5px 10px;
@@ -158,27 +154,6 @@ tooltip label {
     /* padding: 5px 10px; */
 }
 
-#custom-aur {
-    color: @blue;
-}
-
 #custom-pacman {
     color: @blue;
-}
-
-#custom-aur.updated {
-    color: #a6e3a1; /* green */
-}
-
-#custom-pacman.updates {
-    color: #f38ba8; /* red/pink */
-    font-weight: bold;
-}
-
-#custom-wireguard.connected {
-    color: @red; /* green */
-}
-
-#custom-wireguard.disconnected {
-    color: @blue; /* red */
 }

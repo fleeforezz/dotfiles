@@ -12,16 +12,12 @@
         "clock"
     ],
     "modules-right": [
-        "cpu",
-        "memory",
-        "disk",
+        "group/tray-expander",
         "pulseaudio",
         "bluetooth",
         "battery",
         "power-profiles-daemon",
         "custom/networkmanager",
-        // "custom/wireguard",
-        "tray",
         "custom/notification"
     ],
 
@@ -103,33 +99,38 @@
         "format": "{}"
     },
     "hyprland/workspaces": {
-        "format": "{name}",
+        "on-click": "activate",
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": ""
+        "default": "",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "0",
+        "active": "󱓻"
         },
         "persistent-workspaces": {
-            // "HDMI-A-1": [1, 2, 3, 4, 5],
-            // "DP-1": [6, 7, 8, 9, 10],
-            // "DP-2": [11, 12, 13, 14, 15],
-            "*": 5 // 5 workspaces by default on every monitor
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
         }
     },
     "pulseaudio": {
         "format": "<span size='10pt'>{icon}</span> {volume}%",
         "format-bluetooth": "{volume}% {icon} ",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
             "headset": "",
-            "phone": "",
-            "phone-muted": "",
-            "portable": "",
-            "car": "",
             "default": [
                 "",
                 ""
@@ -178,12 +179,6 @@
         "on-click": "sh ~/.config/rofi/rofi-network-manager/network-manager.sh",
         "tooltip": true
     },
-    "custom/wireguard": {
-        "exec": "~/.config/waybar/scripts/vpn-toggle.sh",
-        "interval": 5,
-        "return-type": "json",
-        "on-click": "~/.config/waybar/scripts/vpn-toggle.sh toggle"
-    },
     "bluetooth": {
         "format": " {status}",
         "format-disabled": "",
@@ -193,7 +188,6 @@
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "on-click": "~/.config/rofi/rofi-bluetooth/rofi-bluetooth"
     },
-
     "custom/notification": {
         "tooltip": true,
         "format": "<span size='10pt'>{icon}</span>",
@@ -232,5 +226,25 @@
         "return-type": "json",
         "format": "{}",
         "on-click": "kitty -e zsh -c 'fastfetch && sleep 0.5 && sudo pacman -Syu; exec zsh'"
+    },
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+        },
+        "modules": ["custom/expand-icon", "tray", "cpu", "memory", "disk"]
+    },
+    "custom/expand-icon": {
+        "format": "",
+        "tooltip": false,
+        "on-scroll-up": "",
+        "on-scroll-down": "",
+        "on-scroll-left": "",
+        "on-scroll-right": ""
+    },
+    "tray": {
+        "icon-size": 12,
+        "spacing": 17
     }
 }
