@@ -5,7 +5,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/pacman",
-        // "custom/aur",
         "custom/spotify"
     ],
     "modules-center": [
@@ -14,10 +13,10 @@
     "modules-right": [
         "group/tray-expander",
         "pulseaudio",
-        "bluetooth",
         "battery",
-        "power-profiles-daemon",
+        // "power-profiles-daemon",
         "custom/networkmanager",
+        "tray",
         "custom/notification"
     ],
 
@@ -40,6 +39,7 @@
         "format-alt": "{icon0}{icon1}{icon2}{icon3}",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
     },
+
     "memory": {
         "states": {
         "c": 90,
@@ -58,6 +58,7 @@
         //"tooltip-format": "\udb83\udf86 {percentage}%\n\ue266 {used:0.1f}GB/{total:0.1f}GB",
         "tooltip-format": "\udb83\udf86 Memory usage: {percentage}%\n\ue266 Used: {used:0.2f}GB / {total:0.2f}GB\n\uf85a Available: {avail:0.2f}GB\n\uf233 Swap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
     },
+
     "disk": {
         "interval": 30,
         "format": " {percentage_used}%",
@@ -65,7 +66,7 @@
     },
 
     "clock": {
-        "format": " {:%H:%M}",
+        "format": " {:L%A %H:%M}",
         "rotate": 0,
         "format-alt": " {:%R \udb80\udced %d\u00b7%m\u00b7%y}",
         "tooltip-format": "<span>{calendar}</span>",
@@ -88,6 +89,7 @@
         "on-scroll-down": "shift_down"
         }
     },
+
     "custom/spotify": {
         "exec": "~/.config/waybar/scripts/spotify.sh",
         "interval": 1,
@@ -182,6 +184,7 @@
     "bluetooth": {
         "format": " {status}",
         "format-disabled": "",
+        "format-disconnected": "",
         "format-connected": " {num_connections} connected",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
@@ -233,7 +236,7 @@
         "transition-duration": 600,
         "children-class": "tray-group-item"
         },
-        "modules": ["custom/expand-icon", "tray", "cpu", "memory", "disk"]
+        "modules": ["custom/expand-icon", "cpu", "memory", "disk", "bluetooth"]
     },
     "custom/expand-icon": {
         "format": "",
@@ -242,9 +245,5 @@
         "on-scroll-down": "",
         "on-scroll-left": "",
         "on-scroll-right": ""
-    },
-    "tray": {
-        "icon-size": 12,
-        "spacing": 17
     }
 }

@@ -54,36 +54,11 @@ tooltip label {
     opacity: 0.5;
 }
 
-/* #workspaces button.active {
-    background: @bg3;
-    color: @fg3;
-    min-width: 15px;
-    transition: all 0.3s ease-in-out;
-    font-size: 13px;
-} */
-
-/* #workspaces button:hover {
-    background-color: @bg4;
-    color: @fg3;
-    min-width: 15px;
-    background-size: 400% 400%;
-} */
-
-/* #workspaces button.urgent {
-    background-color: @white;
-    color: @fg3;
-    border-radius: 0px;
-    min-width: 25px;
-    background-size: 400% 400%;
-    transition: all 0.3s ease-in-out;
-} */
-
 #custom-pacman,
 #power-profiles-daemon,
 #cpu,
 #memory,
 #disk,
-#tray,
 #clock,
 #custom-spotify,
 #pulseaudio,
@@ -91,7 +66,6 @@ tooltip label {
 #custom-networkmanager,
 #bluetooth,
 #custom-notification {
-    background-color: @bg0;
     padding: 5 10px;
     border: none;
     box-shadow: none;
@@ -139,19 +113,16 @@ tooltip label {
 #power-profiles-daemon.performance {
     background-color: @bg0;
     color: @blue;
-    /* padding: 5px 10px; */
 }
 
 #power-profiles-daemon.balanced {
     background-color: @bg0;
     color: @blue;
-    /* padding: 5px 10px; */
 }
 
 #power-profiles-daemon.power-saver {
     background-color: @bg0;
     color: @blue;
-    /* padding: 5px 10px; */
 }
 
 #custom-pacman {
