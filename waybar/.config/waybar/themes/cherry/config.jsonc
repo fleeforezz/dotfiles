@@ -5,7 +5,7 @@
     "modules-left": [
         "hyprland/workspaces",
         "custom/pacman",
-        "custom/aur",
+        // "custom/aur",
         "custom/spotify"
     ],
     "modules-center": [

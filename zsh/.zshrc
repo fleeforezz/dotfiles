@@ -41,7 +41,7 @@ export PATH="$HOME/.local/kitty.app/bin:$PATH"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -104,8 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls='exa -l'
-alias upd='sudo apt update'
-alias uprd='sudo apt upgrade'
+alias update='sudo pacman -Syu && yay -Syu'
 alias tx='tmux'
 alias cls='clear'
 
