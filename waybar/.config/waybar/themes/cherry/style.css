@@ -3,6 +3,7 @@
 * {
     border: none;
     background: @bg0;
+    /* background: rgba(20, 20, 20, 0.319); */
     border-radius: 0px;
 
     font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
@@ -35,7 +36,7 @@ tooltip label {
 }
 
 #workspaces {
-    background-color: @bg0;
+    /* background-color: @bg0; */
     border-radius: 0px;
     padding: 5px 0px;
     color: @fg0;
@@ -86,7 +87,7 @@ tooltip label {
 }
 #custom-spotify {
     color: @blue;
-    background-color: @bg0;
+    /* background-color: @bg0; */
 }
 #pulseaudio {
     color: @blue;
@@ -111,17 +112,17 @@ tooltip label {
 }
 
 #power-profiles-daemon.performance {
-    background-color: @bg0;
+    /* background-color: @bg0; */
     color: @blue;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: @bg0;
+    /* background-color: @bg0; */
     color: @blue;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: @bg0;
+    /* background-color: @bg0; */
     color: @blue;
 }
 

@@ -14,7 +14,6 @@
         "group/tray-expander",
         "pulseaudio",
         "battery",
-        // "power-profiles-daemon",
         "custom/networkmanager",
         "tray",
         "custom/notification"

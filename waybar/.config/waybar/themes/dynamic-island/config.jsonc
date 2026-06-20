@@ -7,20 +7,15 @@
     "margin-left": 8,
     "margin-right": 8,
 
-    "modules-left": [
-        
-    ],
     "modules-center": [
         "clock",
         "custom/spotify",
         "hyprland/workspaces",
+        "group/tray-expander",
         "pulseaudio",
         "custom/networkmanager",
         "battery",
         "custom/notification"
-    ],
-    "modules-right": [
-        
     ],
 
     "cpu": {
@@ -194,5 +189,22 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+        "transition-duration": 600,
+        "children-class": "tray-group-item"
+        },
+        "modules": ["custom/expand-icon", "cpu", "memory", "disk", "tray"]
+    },
+    "custom/expand-icon": {
+        "format": "",
+        "tooltip": false,
+        "on-scroll-up": "",
+        "on-scroll-down": "",
+        "on-scroll-left": "",
+        "on-scroll-right": ""
     }
 }
