@@ -36,5 +36,5 @@ hl.gesture({
 
 hl.device({
     name        = "compx-2.4g-wireless-receiver-1",
-    sensitivity = -0.5,
+    sensitivity = -0.2,
 })
